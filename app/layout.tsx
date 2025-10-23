@@ -8,7 +8,7 @@ import "./globals.css";
 // Import the new components
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
-import { Footer } from "@/components/footer"; 
+import { Footer } from "@/components/footer";
 
 // Setup the font
 const inter = Inter({
@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Lakshitha",
+  title: "Lakshitha | AI Architect & Full-Stack Developer",
   description:
     "Portfolio of an AI and Full-Stack Developer building intelligent, end-to-end applications",
 };
