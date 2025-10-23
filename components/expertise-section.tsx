@@ -48,9 +48,9 @@ export function ExpertiseSection() {
         </h2>
 
         {/* --- New 2-Column Layout --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 ">
           {/* --- LEFT COLUMN: Core Technologies --- */}
-          <div className="space-y-10">
+          <div className="space-y-10 fade-in-section">
             {expertiseData.map((category) => (
               <div key={category.title}>
                 <h3 className="text-2xl font-semibold mb-5 text-primary">
@@ -71,7 +71,7 @@ export function ExpertiseSection() {
           </div>
 
           {/* --- RIGHT COLUMN: Experience & Education --- */}
-          <div className="space-y-24 lg:pl-48">
+          <div className="space-y-24 lg:pl-48 fade-in-section">
             {/* Experience Section */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-primary flex items-center gap-3">

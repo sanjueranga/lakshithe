@@ -25,22 +25,26 @@ export function TimelineSection({
         </h2>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-primary to-primary/30 transform md:-translate-x-1/2 fade-in-section" />
+          {/* Timeline line (Typo fixed) */}
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-primary/30 transform md:-translate-x-1/2 " />
 
           <div className="space-y-8">
             {timelineData.map((item) => {
               // --- RIGHT SIDE ITEMS ---
-              // Testimonials, Achievements (star), or Internships (briefcase)
+              // Testimonials, Achievements (star), Internships (briefcase), or Education (graduationCap)
               if (
                 item.type === "testimonial" ||
                 (item as TimelineItemData).icon === "star" ||
-                (item as TimelineItemData).icon === "briefcase"
+                (item as TimelineItemData).icon === "briefcase" ||
+                (item as TimelineItemData).icon === "graduationCap"
               ) {
                 // Render Testimonial Card
                 if (item.type === "testimonial") {
                   return (
-                    <div key={item.id} className="md:flex md:justify-end fade-in-section">
+                    <div
+                      key={item.id}
+                      className="md:flex md:justify-end fade-in-section"
+                    >
                       <div className="md:w-1/2 md:pl-12">
                         <TestimonialCard
                           quote={(item as TestimonialData).quote}
@@ -51,11 +55,14 @@ export function TimelineSection({
                   );
                 }
 
-                // Render Achievement/Internship Card (as a TimelineItem)
+                // Render Achievement/Internship/Education Card (as a TimelineItem)
                 const isExpanded = expandedId === item.id;
                 return (
-                  <div key={item.id} className="md:flex md:justify-end">
-                    <div className="md:w-1/2 md:pl-12 fade-in-section">
+                  <div
+                    key={item.id}
+                    className="md:flex md:justify-end fade-in-section"
+                  >
+                    <div className="md:w-1/2 md:pl-12">
                       <TimelineItem
                         item={item}
                         isExpanded={isExpanded}
@@ -73,7 +80,11 @@ export function TimelineSection({
               // Everything else (which is just icon === "code" / Projects)
               const isExpanded = expandedId === item.id;
               return (
-                <div key={item.id} className="md:flex md:justify-start">
+          
+                <div
+                  key={item.id}
+                  className="md:flex md:justify-start fade-in-section"
+                >
                   <div className="md:w-1/2 md:pr-12">
                     <TimelineItem
                       item={item}

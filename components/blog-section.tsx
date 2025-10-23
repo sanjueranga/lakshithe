@@ -52,7 +52,7 @@ export function BlogSection() {
           some of my thoughts.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in-section">
           {blogPosts.map((post) => (
             <Card
               key={post.id}
