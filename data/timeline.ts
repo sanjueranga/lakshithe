@@ -420,7 +420,7 @@ export const timelineData: TimelineEntry[] = [
     id: "hello-world-2015",
     year: "2015",
     title: "'Hello World' in Pascal",
-    subtitle: "Milestone",
+    subtitle: "How it all started",
     icon: "star",
     description:
       "Wrote my first line of code, 'Hello World', in Pascal at Nugawela Central College. This sparked my interest in computer science.",

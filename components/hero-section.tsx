@@ -73,14 +73,7 @@ export function HeroSection() {
             >
               <Linkedin size={24} />
             </a>
-            <a
-              href="#"
-              target="_blank"
-              aria-label="Medium"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              <FileText size={24} />
-            </a>
+
             <a
               href="#"
               target="_blank"
