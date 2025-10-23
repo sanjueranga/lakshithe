@@ -41,7 +41,7 @@ const expertiseData = [
 
 export function ExpertiseSection() {
   return (
-    <section className="py-24 px-4 bg-background">
+    <section className="py-24 px-4 bg-background" id="skills">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-24 text-foreground text-center">
           Skills & Experience

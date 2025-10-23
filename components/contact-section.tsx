@@ -1,38 +1,54 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  })
-  const [submitted, setSubmitted] = useState(false)
+  });
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    setSubmitted(true)
-    setTimeout(() => {
-      setFormData({ name: "", email: "", message: "" })
-      setSubmitted(false)
-    }, 3000)
-  }
+    e.preventDefault();
+    fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 3000);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
 
   return (
-    <section className="py-20 px-4 bg-card">
+    <section className="py-20 px-4 bg-card" id="contact">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4 text-foreground text-center">Let's Build Something Great.</h2>
+        <h2 className="text-4xl font-bold mb-4 text-foreground text-center">
+          Let's Build Something Great.
+        </h2>
         <p className="text-muted-foreground text-center mb-12">
           Have a project in mind? Let's discuss how we can work together.
         </p>
@@ -40,7 +56,10 @@ export function ContactSection() {
         <Card className="bg-background border-border p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Name
               </label>
               <input
@@ -56,7 +75,10 @@ export function ContactSection() {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Email
               </label>
               <input
@@ -72,7 +94,10 @@ export function ContactSection() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Message
               </label>
               <textarea
@@ -87,12 +112,15 @@ export function ContactSection() {
               />
             </div>
 
-            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2">
+            <Button
+              type="submit"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2"
+            >
               {submitted ? "Message Sent!" : "Send Message"}
             </Button>
           </form>
         </Card>
       </div>
     </section>
-  )
+  );
 }

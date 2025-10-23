@@ -8,6 +8,7 @@ import "./globals.css";
 // Import the new components
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer"; 
 
 // Setup the font
 const inter = Inter({
@@ -43,6 +44,7 @@ export default function RootLayout({
           <Header /> {/* Add the new Header */}
           <main>{children}</main> {/* Wrap children in main for semantics */}
           <Analytics />
+          <Footer /> {/* Add the new Footer */}
         </ThemeProvider>
       </body>
     </html>

@@ -41,7 +41,7 @@ const mediumProfileUrl = "https://medium.com/@lakshithe";
 
 export function BlogSection() {
   return (
-    <section className="py-24 px-4 bg-background">
+    <section className="py-24 px-4 bg-background" id="blog">
       <div className="max-w-6xl mx-auto">
         {/* --- Centered Title & Subtitle --- */}
         <h2 className="text-4xl font-bold mb-4 text-foreground text-center">
