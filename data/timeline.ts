@@ -228,7 +228,7 @@ export const timelineData: TimelineEntry[] = [
   {
     id: "xanvia-founded-2024",
     year: "2024",
-    title: "Co-Founder - Xanvia (xanvia.tech)",
+    title: "Co-Founder - Xanvia ",
     subtitle: "Achievement",
     icon: "star",
     description:
