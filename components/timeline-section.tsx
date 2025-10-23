@@ -26,7 +26,7 @@ export function TimelineSection({
 
         <div className="relative">
           {/* Timeline line (Typo fixed) */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-primary/30 transform md:-translate-x-1/2 " />
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-primary to-primary/30 transform md:-translate-x-1/2 " />
 
           <div className="space-y-8">
             {timelineData.map((item) => {
@@ -80,7 +80,6 @@ export function TimelineSection({
               // Everything else (which is just icon === "code" / Projects)
               const isExpanded = expandedId === item.id;
               return (
-          
                 <div
                   key={item.id}
                   className="md:flex md:justify-start fade-in-section"
