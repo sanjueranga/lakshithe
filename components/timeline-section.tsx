@@ -26,7 +26,7 @@ export function TimelineSection({
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-primary to-primary/30 transform md:-translate-x-1/2" />
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-primary to-primary/30 transform md:-translate-x-1/2 fade-in-section" />
 
           <div className="space-y-8">
             {timelineData.map((item) => {
@@ -40,7 +40,7 @@ export function TimelineSection({
                 // Render Testimonial Card
                 if (item.type === "testimonial") {
                   return (
-                    <div key={item.id} className="md:flex md:justify-end">
+                    <div key={item.id} className="md:flex md:justify-end fade-in-section">
                       <div className="md:w-1/2 md:pl-12">
                         <TestimonialCard
                           quote={(item as TestimonialData).quote}
@@ -55,7 +55,7 @@ export function TimelineSection({
                 const isExpanded = expandedId === item.id;
                 return (
                   <div key={item.id} className="md:flex md:justify-end">
-                    <div className="md:w-1/2 md:pl-12">
+                    <div className="md:w-1/2 md:pl-12 fade-in-section">
                       <TimelineItem
                         item={item}
                         isExpanded={isExpanded}

@@ -9,6 +9,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import ClientEffects from "@/components/client-effects";
 
 // Setup the font
 const inter = Inter({
@@ -42,6 +43,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header /> {/* Add the new Header */}
+          <ClientEffects />
           <main>{children}</main> {/* Wrap children in main for semantics */}
           <Analytics />
           <Footer /> {/* Add the new Footer */}

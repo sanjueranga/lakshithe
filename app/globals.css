@@ -138,6 +138,16 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
