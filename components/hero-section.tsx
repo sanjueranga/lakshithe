@@ -24,6 +24,22 @@ const UpworkIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+const scrollTo = (id: string) => {
+  // Add a small offset to account for the header height
+  const element = document.getElementById(id);
+  if (element) {
+    const headerOffset = 64; // 16 * 4 (h-16 in header)
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+};
+
+
 export function HeroSection() {
   // --- FIXED: Use ONLY borderRadius for the smooth, "cloud-like" shape ---
   const imageShapeStyle = {
@@ -63,6 +79,7 @@ export function HeroSection() {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10 px-8 bg-transparent"
+              onClick={() => scrollTo("journey")}
             >
               See My Work
             </Button>
