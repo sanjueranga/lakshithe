@@ -22,8 +22,8 @@ export function HeroSection() {
 
   return (
     // Use a subtle radial gradient for a modern background feel
-    <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-32 bg-[radial-gradient(ellipse_at_top_right,_var(--muted)_0%,_var(--background)_70%)]">
-      <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-32 bg-[radial-gradient(ellipse_at_top_right,var(--muted)_0%,var(--background)_70%)]">
+      <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
         {/* --- Left Column (Text Content) --- */}
         <div className="text-left row-start-2 lg:row-start-auto">
           {/* Headline - Split for emphasis */}
@@ -32,7 +32,7 @@ export function HeroSection() {
             <span className="block text-primary">Full-Stack Developer</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-20  max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
             I build intelligent, end-to-end applications, from complex backends
             to AI-driven features. See my journey of how I build systems that
             learn and scale.
@@ -94,12 +94,12 @@ export function HeroSection() {
 
         {/* --- Right Column (Image + Floating Stats) --- */}
         {/* On mobile, this will stack first (row-start-1) */}
-        <div className="relative w-full row-start-1 lg:row-start-auto flex justify-center lg:justify-start lg:pl-20">
+        <div className="relative w-full row-start-1 lg:row-start-auto flex justify-center lg:justify-start ">
           {/* Image Wrapper */}
-          <div className="relative w-full max-w-sm ">
+          <div className="relative w-full max-w-sm">
             {/* Subtle background glow effect - NOW CLIPPED */}
             <div
-              className="absolute -inset-2.5 bg-gradient-to-r from-primary to-emerald-600 blur-lg opacity-30 dark:opacity-20 animate-pulse-slow"
+              className="absolute -inset-2.5 bg-linear-to-r from-primary to-emerald-600 blur-lg opacity-30 dark:opacity-20 animate-pulse-slow"
               style={imageShapeStyle} // Apply the curved shape
             ></div>
 
