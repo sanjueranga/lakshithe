@@ -378,8 +378,8 @@ export const timelineData: TimelineEntry[] = [
   {
     id: "cert-big-data-2022",
     year: "2022",
-    title: "Introduction to Big Data (Coursera)",
-    subtitle: "Certificate",
+    title: "Introduction to Big Data",
+    subtitle: "Couresra Certificate",
     icon: "star",
     description:
       "Learned the fundamentals of Big Data from UC San Diego, covering data management, processing, and the Hadoop ecosystem.",
@@ -394,7 +394,7 @@ export const timelineData: TimelineEntry[] = [
     id: "cert-deep-learning-2021",
     year: "2021",
     title: "Deep Learning Specialization (Coursera)",
-    subtitle: "Certificate",
+    subtitle: "Couresra Certificate",
     icon: "star",
     description:
       "Completed the DeepLearning.AI specialization, covering Neural Networks, Hyperparameter Tuning, and Structuring ML Projects.",
