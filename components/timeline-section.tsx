@@ -25,17 +25,18 @@ export function TimelineSection({
         </h2>
 
         <div className="relative">
-          {/* Timeline line (Typo fixed) */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-primary to-primary/30 transform md:-translate-x-1/2 " />
+          {/* FIX 1: Timeline bar moved from left-0 to left-4 on mobile.
+            It's still centered on desktop (md:left-1/2).
+          */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-primary to-primary/30 transform md:-translate-x-1/2 " />
 
           <div className="space-y-8">
             {timelineData.map((item) => {
               // --- RIGHT SIDE ITEMS ---
-              // Testimonials, Achievements (star), Internships (briefcase), or Education (graduationCap)
               if (
                 item.type === "testimonial" ||
                 (item as TimelineItemData).icon === "star" ||
-                (item as TimelineItemData).icon === "briefcase" 
+                (item as TimelineItemData).icon === "briefcase"
               ) {
                 // Render Testimonial Card
                 if (item.type === "testimonial") {
@@ -44,7 +45,10 @@ export function TimelineSection({
                       key={item.id}
                       className="md:flex md:justify-end fade-in-section"
                     >
-                      <div className="md:w-1/2 md:pl-12">
+                      {/* FIX 2: Added `w-full pl-12` for mobile.
+                        The `md:` classes override this on desktop.
+                      */}
+                      <div className="w-full pl-12 md:w-1/2 md:pl-12">
                         <TestimonialCard
                           quote={(item as TestimonialData).quote}
                           author={(item as TestimonialData).author}
@@ -54,14 +58,16 @@ export function TimelineSection({
                   );
                 }
 
-                // Render Achievement/Internship/Education Card (as a TimelineItem)
+                // Render Achievement/Internship Card
                 const isExpanded = expandedId === item.id;
                 return (
                   <div
                     key={item.id}
                     className="md:flex md:justify-end fade-in-section"
                   >
-                    <div className="md:w-1/2 md:pl-12">
+                    {/* FIX 2 (Again): Added `w-full pl-12` for mobile.
+                     */}
+                    <div className="w-full pl-12 md:w-1/2 md:pl-12">
                       <TimelineItem
                         item={item}
                         isExpanded={isExpanded}
@@ -76,14 +82,16 @@ export function TimelineSection({
               }
 
               // --- LEFT SIDE ITEMS ---
-              // Everything else (which is just icon === "code" / Projects)
               const isExpanded = expandedId === item.id;
               return (
                 <div
                   key={item.id}
                   className="md:flex md:justify-start fade-in-section"
                 >
-                  <div className="md:w-1/2 md:pr-12">
+                  {/* FIX 3: Added `w-full pl-12` for mobile.
+                    Kept `md:pr-12` for desktop.
+                  */}
+                  <div className="w-full pl-12 md:w-1/2 md:pr-12">
                     <TimelineItem
                       item={item}
                       isExpanded={isExpanded}
