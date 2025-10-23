@@ -35,8 +35,7 @@ export function TimelineSection({
               if (
                 item.type === "testimonial" ||
                 (item as TimelineItemData).icon === "star" ||
-                (item as TimelineItemData).icon === "briefcase" ||
-                (item as TimelineItemData).icon === "graduationCap"
+                (item as TimelineItemData).icon === "briefcase" 
               ) {
                 // Render Testimonial Card
                 if (item.type === "testimonial") {

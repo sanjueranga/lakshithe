@@ -79,6 +79,21 @@ export const timelineData: TimelineEntry[] = [
     liveUrl: "#",
   },
   {
+    id: "social-automation-2025",
+    year: "2025",
+    title: "Social Media Content Automation Pipeline",
+    subtitle: "@ Taino spain S.L",
+    icon: "code",
+    description:
+      "Developing an agentic, multi-platform content automation pipeline using n8n to generate, manage, and distribute social media content.",
+    technologies: ["n8n", "AI Agents", "Webhooks", "REST APIs", "Python"],
+    caseStudyTitle: "Agentic Automation for Multi-Platform Social Media",
+    caseStudyContent:
+      "This project involves building an intelligent workflow using n8n to automate the social media content lifecycle. It uses agentic AI to handle content generation and adaptation, while the n8n pipeline manages approvals, scheduling, and posting across multiple platforms (like Instagram, X, and LinkedIn) via their respective APIs.",
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+  {
     id: "upwork-rising-talent-2025",
     year: "2025",
     title: "Upwork Rising Talent",
@@ -91,22 +106,6 @@ export const timelineData: TimelineEntry[] = [
     caseStudyContent: "",
     githubUrl: "",
     liveUrl: "",
-  },
-  {
-    id: "intern-taino-2025",
-    year: "2025",
-    title: "AI & Automation Intern",
-    subtitle: "Internship @ Taino Spain S.L",
-    icon: "briefcase",
-    tags: ["AI", "Web"], // <-- ADDED
-    description:
-      "Built a social media content generation pipeline using n8n, web scrapers, and AI model integration.",
-    technologies: ["n8n", "Web Scraping", "AI Integration", "Automation"],
-    caseStudyTitle: "Social Media Content Automation",
-    caseStudyContent:
-      "As part of a collaborative team, I helped design and build an automation workflow using n8n. This pipeline scrapes content from multiple sources, processes it, uses an AI model to generate new social media prompts and content, and schedules it for posting. This project honed my skills in workflow automation and practical AI integration.",
-    githubUrl: "#",
-    liveUrl: "#",
   },
   {
     id: "testimonial-sachin",
