@@ -23,7 +23,7 @@ export function HeroSection() {
   return (
     // Use a subtle radial gradient for a modern background feel
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-32 bg-[radial-gradient(ellipse_at_top_right,var(--muted)_0%,var(--background)_70%)]">
-      <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
         {/* --- Left Column (Text Content) --- */}
         <div className="text-left row-start-2 lg:row-start-auto">
           {/* Headline - Split for emphasis */}
