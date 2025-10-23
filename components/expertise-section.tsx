@@ -84,13 +84,13 @@ export function ExpertiseSection() {
                     <Briefcase className="w-3 h-3 text-primary-foreground" />
                   </span>
                   <h4 className="text-lg font-semibold text-foreground">
-                    AI & Automation Engineer (Intern)
+                    AI & Automation Engineer
                   </h4>
                   <p className="text-base font-normal text-muted-foreground mb-1">
                     Taino Spain S.L
                   </p>
                   <time className="text-sm font-normal leading-none text-muted-foreground/80">
-                    2025 - Present
+                    2025 - Present (Intern)
                   </time>
                 </li>
                 <li className="ml-8">
