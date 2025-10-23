@@ -34,7 +34,7 @@ export const timelineData: TimelineEntry[] = [
     id: "rag-chatbot-2025",
     year: "2025 (In Progress)",
     title: "Multi-Platform RAG Chatbot",
-    subtitle: "Project",
+    subtitle: "@ Taino Spain S.L",
     icon: "code",
     tags: ["AI"], // <-- ADDED
     description:
@@ -50,9 +50,9 @@ export const timelineData: TimelineEntry[] = [
     id: "mixtape-saas-2025",
     year: "2025 (In Progress)",
     title: "AI Backend (Mixtape SaaS)",
-    subtitle: "Project",
+    subtitle: "Upwork Project",
     icon: "code",
-    tags: ["AI"], // <-- ADDED
+    tags: ["AI", "Web"], // <-- ADDED
     description:
       "Developing the AI backend and making production ready for an upcoming SaaS product involving AI video generation and S3 storage.",
     technologies: ["AI", "Video Generation", "S3", "Python", "FastAPI"],
@@ -79,21 +79,6 @@ export const timelineData: TimelineEntry[] = [
     liveUrl: "#",
   },
   {
-    id: "social-automation-2025",
-    year: "2025",
-    title: "Social Media Content Automation Pipeline",
-    subtitle: "@ Taino spain S.L",
-    icon: "code",
-    description:
-      "Developing an agentic, multi-platform content automation pipeline using n8n to generate, manage, and distribute social media content.",
-    technologies: ["n8n", "AI Agents", "Webhooks", "REST APIs", "Python"],
-    caseStudyTitle: "Agentic Automation for Multi-Platform Social Media",
-    caseStudyContent:
-      "This project involves building an intelligent workflow using n8n to automate the social media content lifecycle. It uses agentic AI to handle content generation and adaptation, while the n8n pipeline manages approvals, scheduling, and posting across multiple platforms (like Instagram, X, and LinkedIn) via their respective APIs.",
-    githubUrl: "#",
-    liveUrl: "#",
-  },
-  {
     id: "upwork-rising-talent-2025",
     year: "2025",
     title: "Upwork Rising Talent",
@@ -107,6 +92,23 @@ export const timelineData: TimelineEntry[] = [
     githubUrl: "",
     liveUrl: "",
   },
+  {
+    id: "social-automation-2025",
+    year: "2025",
+    title: "Social Media Content Automation Pipeline",
+    subtitle: "@ Taino Spain S.L",
+    icon: "code",
+    tags: ["AI"],
+    description:
+      "Developing an agentic, multi-platform content automation pipeline using n8n to generate, manage, and distribute social media content.",
+    technologies: ["n8n", "AI Agents", "Webhooks", "REST APIs", "Python"],
+    caseStudyTitle: "Agentic Automation for Multi-Platform Social Media",
+    caseStudyContent:
+      "This project involves building an intelligent workflow using n8n to automate the social media content lifecycle. It uses agentic AI to handle content generation and adaptation, while the n8n pipeline manages approvals, scheduling, and posting across multiple platforms (like Instagram, X, and LinkedIn) via their respective APIs.",
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+
   {
     id: "testimonial-sachin",
     type: "testimonial",
@@ -152,6 +154,7 @@ export const timelineData: TimelineEntry[] = [
     quote: "He is the best Django guy i have worked with",
     author: "Faithfulnes A. (Client on Upwork)",
   },
+
   {
     id: "upwork-s3-django-2025",
     year: "2025",
@@ -167,6 +170,27 @@ export const timelineData: TimelineEntry[] = [
       "A client's Django application was failing in production due to an inability to connect to its S3 bucket. I diagnosed the issue, which involved incorrect IAM policies and misconfigured Django-storages settings, and implemented a fix to restore full functionality.",
     githubUrl: "#",
     liveUrl: "https://www.upwork.com/freelancers/~013fa9079ef42bd1b1",
+  },
+
+  {
+    id: "csup-reignite-2025",
+    year: "2025",
+    title: "President CSUP - 'REIGNITE '25 - CSUP Game Night",
+    subtitle: "CSUP Achievement",
+    icon: "star",
+    description:
+      "As President of the Computer Society, I successfully organized and led 'REIGNITE '25', a game night for 80+ participants featuring 2 main game events.",
+    technologies: [
+      "Leadership",
+      "Event Management",
+      "Team Coordination",
+      "Sponsorship",
+    ],
+    caseStudyTitle: "Organizing 'REIGNITE '25 Game Night'",
+    caseStudyContent:
+      "As CSUP President, I was responsible for the entire event lifecycle of 'REIGNITE '25'. This involved leading a team of coordinators, securing sponsorships, managing logistics, and promoting the event to attract over 80 participants. We successfully ran two concurrent gaming tournaments, resulting in one of the most well-attended events of the year.",
+    githubUrl: "#",
+    liveUrl: "#",
   },
   // --- 2024 ---
   {
@@ -220,7 +244,7 @@ export const timelineData: TimelineEntry[] = [
     id: "trading-insights-chrome-2024",
     year: "2024",
     title: "Trading Insights Chrome Extension",
-    subtitle: "Personal Project",
+    subtitle: "UK Client Project",
     icon: "code",
     tags: ["AI", "Web"], // <-- ADDED
     description:
@@ -235,8 +259,8 @@ export const timelineData: TimelineEntry[] = [
   {
     id: "opened-lms-2024",
     year: "2024",
-    title: "OpenEd LMS (opened.pdn.ac.lk)",
-    subtitle: "Lead Project",
+    title: "OpenEd LMS (IT center UOP)",
+    subtitle: "3rd Year Project",
     icon: "code",
     tags: ["Web"], // <-- ADDED
     description:
@@ -275,8 +299,8 @@ export const timelineData: TimelineEntry[] = [
   {
     id: "semicolon-autocredit-2023",
     year: "2023",
-    title: "Autocredit (Semicolon Devs)",
-    subtitle: "Project",
+    title: "Autocredit",
+    subtitle: "@ semicolon Devs",
     icon: "code",
     tags: ["Web"], // <-- ADDED
     description:
@@ -291,8 +315,8 @@ export const timelineData: TimelineEntry[] = [
   {
     id: "semicolon-smit-2023",
     year: "2023",
-    title: "SMIT LMS (Semicolon Devs)",
-    subtitle: "Project",
+    title: "SMIT LMS",
+    subtitle: "@ semicolon Devs",
     icon: "code",
     tags: ["Web"], // <-- ADDED
     description:
@@ -304,26 +328,7 @@ export const timelineData: TimelineEntry[] = [
     githubUrl: "#",
     liveUrl: "https://www.studymedicineitaly.com/",
   },
-  {
-    id: "csup-reignite-2025",
-    year: "2023",
-    title: "President CSUP - 'REIGNITE '25 - CSUP Game Night",
-    subtitle: "CSUP Achievement",
-    icon: "star",
-    description:
-      "As President of the Computer Society, I successfully organized and led 'REIGNITE '25', a game night for 80+ participants featuring 2 main game events.",
-    technologies: [
-      "Leadership",
-      "Event Management",
-      "Team Coordination",
-      "Sponsorship",
-    ],
-    caseStudyTitle: "Organizing 'REIGNITE '25 Game Night'",
-    caseStudyContent:
-      "As CSUP President, I was responsible for the entire event lifecycle of 'REIGNITE '25'. This involved leading a team of coordinators, securing sponsorships, managing logistics, and promoting the event to attract over 80 participants. We successfully ran two concurrent gaming tournaments, resulting in one of the most well-attended events of the year.",
-    githubUrl: "#",
-    liveUrl: "#",
-  },
+
   {
     id: "csup-devops-2023",
     year: "2023",
