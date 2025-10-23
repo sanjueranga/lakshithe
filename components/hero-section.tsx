@@ -43,10 +43,12 @@ export function HeroSection() {
             <span className="block text-primary">Full-Stack Developer</span>
           </h1>
 
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+            I build intelligent, end-to-end applications — from complex backends
+            to AI-driven features.
+          </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            I build intelligent, end-to-end applications, from complex backends
-            to AI-driven features. See my journey of how I build systems that
-            learn and scale.
+            Explore how I design systems that learn, scale, and evolve.
           </p>
 
           {/* --- Buttons --- */}

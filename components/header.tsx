@@ -33,7 +33,7 @@ export function Header() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} // Scroll to top
             className="text-lg font-bold text-foreground cursor-pointer hover:text-primary transition-colors"
           >
-            Lakshitha
+            Lakshitha Eranga
           </span>
 
           {/* --- Right Side: Nav Links & Theme Toggle --- */}
