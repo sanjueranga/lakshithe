@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Lakshitha | AI Architect & Full-Stack Developer",
+  title: "Lakshithe | AI Architect & Full-Stack Developer",
   description:
     "Portfolio of an AI and Full-Stack Developer building intelligent, end-to-end applications",
 };
