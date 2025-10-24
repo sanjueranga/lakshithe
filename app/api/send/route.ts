@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     `;
 
     const data = await resend.emails.send({
-      from: MY_EMAIL,
+      from: "help@xanvia.tech",
       to: MY_EMAIL, // <-- Fix 1: Send the email to YOURSELF
       subject: `New Portfolio Message from ${name}`,
       // Fix 3: Use the 'html' property instead of 'react'
