@@ -242,7 +242,7 @@ export const timelineData: TimelineEntry[] = [
     description:
       "Automated a UK client's binary options trading strategy, integrating a ChatGPT-based LLM for auto-trading decisions.",
     technologies: [
-      "Python",
+      "Next.js",
       "ChatGPT",
       "LLM",
       "Automation",
@@ -251,7 +251,7 @@ export const timelineData: TimelineEntry[] = [
     ],
     caseStudyTitle: "AI-Powered Binary Options Trading Bot",
     caseStudyContent:
-      "This Xanvia project involved automating a client's complex trading strategy. I developed a Python application that interfaced with a binary options site, analyzed market data, and fed that data to a ChatGPT LLM for trade decisions. The system then executed trades automatically based on the LLM's response.",
+      "This Xanvia project involved automating a client's complex trading strategy. I developed a NextJs application that interfaced with a binary options site, analyzed market data, and fed that data to a ChatGPT LLM for trade decisions. The system then executed trades automatically based on the LLM's response.",
     githubUrl: "#",
     liveUrl: "#",
   },
