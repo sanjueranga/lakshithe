@@ -39,7 +39,16 @@ export const timelineData: TimelineEntry[] = [
     tags: ["AI"], // <-- ADDED
     description:
       "Developing a multi-platform RAG chatbot (WhatsApp, Instagram, Web) using FastAPI, LangChain, and vector databases.",
-    technologies: ["FastAPI", "LangChain", "Graph RAG", "VectorDB", "Python"],
+    technologies: [
+      "FastAPI",
+      "LangChain",
+      "RAG",
+      "VectorDB",
+      "Python",
+      "LLM",
+      "Prompt Engineering",
+      "Docker",
+    ],
     caseStudyTitle: "Building a Multi-Platform RAG Chatbot",
     caseStudyContent:
       "This in-progress project involves architecting a sophisticated RAG system to handle queries from multiple sources. The goal is to create a unified AI assistant that can be accessed via WhatsApp, Instagram, and a web interface, all powered by a single FastAPI backend and a Graph RAG implementation for complex, contextual answers.",
@@ -52,10 +61,17 @@ export const timelineData: TimelineEntry[] = [
     title: "AI Backend (Mixtape SaaS)",
     subtitle: "Upwork Project",
     icon: "code",
-    tags: ["AI", "Web"], // <-- ADDED
+    tags: ["AI", "Web"], // <-- ADDEDrag
     description:
       "Developing the AI backend and making production ready for an upcoming SaaS product involving AI video generation and S3 storage.",
-    technologies: ["AI", "Video Generation", "S3", "Python", "FastAPI"],
+    technologies: [
+      "AI",
+      "Video Generation",
+      "S3",
+      "Python",
+      "FastAPI",
+      "Django",
+    ],
     caseStudyTitle: "AI Backend for SaaS",
     caseStudyContent:
       "Architecting and building the core AI backend for a new SaaS platform. This role involves integrating video generation models, managing asynchronous tasks, and ensuring scalable, cost-efficient file storage with AWS S3.",
@@ -202,7 +218,14 @@ export const timelineData: TimelineEntry[] = [
     tags: ["Web"], // <-- ADDED
     description:
       "Co-led design, architecture, and development of a property rental service for UK students, including Stripe payment integration.",
-    technologies: ["Django", "Next.js", "Stripe", "SaaS", "Architecture"],
+    technologies: [
+      "Django",
+      "Next.js",
+      "Stripe",
+      "SaaS",
+      "Architecture",
+      "Tailwind CSS",
+    ],
     caseStudyTitle: "Co-founding StudentMoves.co.uk",
     caseStudyContent:
       "As a co-founder and lead developer at Xanvia, I architected and built this platform from the ground up. My responsibilities included designing the database schema (PostgreSQL), developing the Django backend, and integrating the Stripe payment gateway. This project involved full-cycle SaaS development, from idea to deployment.",
@@ -218,7 +241,14 @@ export const timelineData: TimelineEntry[] = [
     tags: ["AI"], // <-- ADDED
     description:
       "Automated a UK client's binary options trading strategy, integrating a ChatGPT-based LLM for auto-trading decisions.",
-    technologies: ["Python", "ChatGPT", "LLM", "Automation", "Trading"],
+    technologies: [
+      "Python",
+      "ChatGPT",
+      "LLM",
+      "Automation",
+      "Trading",
+      "OpenAI API",
+    ],
     caseStudyTitle: "AI-Powered Binary Options Trading Bot",
     caseStudyContent:
       "This Xanvia project involved automating a client's complex trading strategy. I developed a Python application that interfaced with a binary options site, analyzed market data, and fed that data to a ChatGPT LLM for trade decisions. The system then executed trades automatically based on the LLM's response.",
@@ -267,11 +297,15 @@ export const timelineData: TimelineEntry[] = [
       "Led the end-to-end development of a comprehensive LMS for the University of Peradeniya, from planning to deployment. Features HLS video streaming and payments.",
     technologies: [
       "Django",
+      "TypeScript",
       "Next.js",
       "PostgreSQL",
       "CI/CD",
       "Unit Testing",
       "HLS",
+      "Microservices",
+      "Rest APIs",
+      "Payment Gateways",
     ],
     caseStudyTitle: "Lead Developer - OpenEd LMS",
     caseStudyContent:

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TimelineItem } from "./timeline-item";
 import { TestimonialCard } from "./testimonial-card";
 // Import the data AND the types
@@ -10,12 +10,52 @@ import {
   TimelineItemData,
 } from "@/data/timeline";
 
+// --- NEW: Helper function for scrolling ---
+const scrollToTimelineId = (timelineId: string) => {
+  const element = document.getElementById(timelineId);
+  if (element) {
+    const headerOffset = 80; // 64px for header + 16px buffer
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+};
+
 export function TimelineSection({
   onSelectCaseStudy,
 }: {
   onSelectCaseStudy: (id: string) => void;
 }) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleSkillClick = (event: Event) => {
+      const customEvent = event as CustomEvent;
+      const { id } = customEvent.detail;
+      if (id) {
+        setExpandedId(id); // 1. Set the state to expand the item
+      }
+    };
+
+    window.addEventListener("skillClick", handleSkillClick);
+    return () => {
+      window.removeEventListener("skillClick", handleSkillClick);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (expandedId) {
+      // Use a short timeout to make sure the DOM has updated
+      // and the item is expanded *before* we scroll to it.
+      const timer = setTimeout(() => {
+        scrollToTimelineId(expandedId); // 2. Scroll to the now-expanded item
+      }, 100); // 100ms is usually enough
+      return () => clearTimeout(timer);
+    }
+  }, [expandedId]);
 
   return (
     <section className="py-20 px-4 bg-card" id="journey">
@@ -43,6 +83,7 @@ export function TimelineSection({
                   return (
                     <div
                       key={item.id}
+                      id={item.id}
                       className="md:flex md:justify-end fade-in-section"
                     >
                       {/* FIX 2: Added `w-full pl-12` for mobile.
@@ -63,6 +104,7 @@ export function TimelineSection({
                 return (
                   <div
                     key={item.id}
+                    id={item.id}
                     className="md:flex md:justify-end fade-in-section"
                   >
                     {/* FIX 2 (Again): Added `w-full pl-12` for mobile.
@@ -86,6 +128,7 @@ export function TimelineSection({
               return (
                 <div
                   key={item.id}
+                  id={item.id}
                   className="md:flex md:justify-start fade-in-section"
                 >
                   {/* FIX 3: Added `w-full pl-12` for mobile.

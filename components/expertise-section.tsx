@@ -1,56 +1,66 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-// Import new icons
 import { Briefcase, GraduationCap } from "lucide-react";
 
-// Updated expertise data as requested
-const expertiseData = [
-  {
-    title: "AI & ML",
-    skills: [
-      "FastAPI",
-      "LangChain",
-      "PyTorch",
-      "RAG",
-      "VectorDBs",
-      "Transformers",
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
-      "Django",
-      "Node.js",
-      "PostgreSQL",
-      "MongoDB",
-      "Microservices",
-      "REST APIs",
-      "GraphQL",
-    ],
-  },
-  {
-    title: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    title: "DevOps & Tools",
-    skills: ["Docker", "n8n", "Vercel", "Git", "CI/CD", "AWS"],
-  },
-];
+// --- 1. Import BOTH data files ---
+import { expertiseData } from "@/data/expertise";
+import { timelineData, TimelineItemData } from "@/data/timeline";
 
 export function ExpertiseSection() {
+  // --- 2. This helper function just handles the smooth scrolling ---
+  // (We will call this from the timeline section now)
+  const scrollToTimelineId = (timelineId: string) => {
+    const element = document.getElementById(timelineId);
+    if (element) {
+      const headerOffset = 80; // 64px for header + 16px buffer
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  // --- 3. This function now finds the ID and dispatches an event ---
+  const handleSkillClick = (skillName: string) => {
+    // Find the first (newest) timeline item that includes this skill
+    const foundItem = timelineData.find(
+      (item) =>
+        item.type !== "testimonial" &&
+        (item as TimelineItemData).technologies &&
+        (item as TimelineItemData).technologies.includes(skillName)
+    );
+
+    if (foundItem) {
+      // --- NEW: Dispatch a custom event with the ID ---
+      window.dispatchEvent(
+        new CustomEvent("skillClick", { detail: { id: foundItem.id } })
+      );
+      // We also scroll immediately
+      scrollToTimelineId(foundItem.id);
+    } else {
+      // Fallback: if no item is found, just scroll to the top of the journey
+      scrollToTimelineId("journey");
+    }
+  };
+
   return (
     <section className="py-24 px-4 bg-background" id="skills">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-24 text-foreground text-center">
+        <h2 className="text-4xl font-bold text-foreground text-center mb-16">
           Skills & Experience
         </h2>
 
-        {/* --- New 2-Column Layout --- */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 ">
           {/* --- LEFT COLUMN: Core Technologies --- */}
           <div className="space-y-10 fade-in-section">
+            <p className="mb-6 font-semibold">
+              Click a <span className=" text-primary">skill</span> to see it in
+              action.
+            </p>
             {expertiseData.map((category) => (
               <div key={category.title}>
                 <h3 className="text-2xl font-semibold mb-5 text-primary">
@@ -58,12 +68,16 @@ export function ExpertiseSection() {
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium text-foreground hover:border-primary/80 transition-colors cursor-default"
+                    <button
+                      key={skill.name}
+                      onClick={() => handleSkillClick(skill.name)} // <-- Fires the event
+                      className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium text-foreground 
+                                 hover:border-primary hover:text-primary transition-colors cursor-pointer
+                                 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
+                      title={`Click to see my work with ${skill.name}`}
                     >
-                      {skill}
-                    </span>
+                      {skill.name}
+                    </button>
                   ))}
                 </div>
               </div>
@@ -71,8 +85,8 @@ export function ExpertiseSection() {
           </div>
 
           {/* --- RIGHT COLUMN: Experience & Education --- */}
-          <div className="space-y-24 lg:pl-48 fade-in-section">
-            {/* Experience Section */}
+          <div className="space-y-24 lg:pl-48 fade-in-section mt-12">
+            {/* Experience Section (no changes here) */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-primary flex items-center gap-3">
                 <Briefcase className="w-6 h-6" />
@@ -110,7 +124,7 @@ export function ExpertiseSection() {
               </ol>
             </div>
 
-            {/* Education Section */}
+            {/* Education Section (no changes here) */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-primary flex items-center gap-3 ">
                 <GraduationCap className="w-6 h-6" />
