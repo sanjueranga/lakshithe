@@ -14,6 +14,7 @@ export const expertiseData: ExpertiseCategory[] = [
     skills: [
       { name: "FastAPI" },
       { name: "Python" },
+      { name: "Agentic AI" },
       { name: "LLM" },
       { name: "OpenAI API" },
       { name: "LangChain" },
@@ -22,6 +23,9 @@ export const expertiseData: ExpertiseCategory[] = [
       { name: "Transformers" },
       { name: "Fine-Tuning" },
       { name: "Prompt Engineering" },
+      { name: "Automation" },
+      { name: "n8n" },
+      { name: "Orchestration" },
     ],
   },
   {
@@ -54,11 +58,11 @@ export const expertiseData: ExpertiseCategory[] = [
       { name: "Docker" },
       { name: "n8n" },
       { name: "VectorDBs" },
-
       { name: "Vercel" },
       { name: "Git" },
       { name: "CI/CD" },
       { name: "AWS" },
+      { name: "supabase" },
     ],
   },
 ];
