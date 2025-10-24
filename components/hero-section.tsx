@@ -39,7 +39,6 @@ const scrollTo = (id: string) => {
   }
 };
 
-
 export function HeroSection() {
   // --- FIXED: Use ONLY borderRadius for the smooth, "cloud-like" shape ---
   const imageShapeStyle = {
@@ -72,6 +71,7 @@ export function HeroSection() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 shadow-lg shadow-primary/30"
+              onClick={() => scrollTo("contact")}
             >
               Get in Touch
             </Button>
