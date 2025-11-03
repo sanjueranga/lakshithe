@@ -95,6 +95,13 @@ export const timelineData: TimelineEntry[] = [
     liveUrl: "#",
   },
   {
+    id: "testimonial-amehs2",
+    type: "testimonial",
+    quote:
+      "He is so hardworking and good, he keeps to deadlines, Hire him if you have the opportunity you won't regret.",
+    author: "Faithfulnes (Client on Upwork)",
+  },
+  {
     id: "upwork-rising-talent-2025",
     year: "2025",
     title: "Upwork Rising Talent",
@@ -117,7 +124,14 @@ export const timelineData: TimelineEntry[] = [
     tags: ["AI"],
     description:
       "Developing an agentic, multi-platform content automation pipeline using n8n to generate, manage, and distribute social media content.",
-    technologies: ["n8n", "AI Agents", "Webhooks", "REST APIs", "Python","Automation"],
+    technologies: [
+      "n8n",
+      "AI Agents",
+      "Webhooks",
+      "REST APIs",
+      "Python",
+      "Automation",
+    ],
     caseStudyTitle: "Agentic Automation for Multi-Platform Social Media",
     caseStudyContent:
       "This project involves building an intelligent workflow using n8n to automate the social media content lifecycle. It uses agentic AI to handle content generation and adaptation, while the n8n pipeline manages approvals, scheduling, and posting across multiple platforms (like Instagram, X, and LinkedIn) via their respective APIs.",
@@ -141,7 +155,14 @@ export const timelineData: TimelineEntry[] = [
     tags: ["AI"], // <-- ADDED
     description:
       "Fixed and integrated a multi-agent system, connecting a Playwright test execution agent with a QA agent using LangChain.",
-    technologies: ["LangChain", "Multi-Agent", "Playwright", "Pydantic", "Python","Agentic AI"],
+    technologies: [
+      "LangChain",
+      "Multi-Agent",
+      "Playwright",
+      "Pydantic",
+      "Python",
+      "Agentic AI",
+    ],
     caseStudyTitle: "Multi-Agent QA System Integration",
     caseStudyContent:
       "This project involved fixing a complex multi-agent system. I integrated a Playwright agent (for test execution) with a QA agent (for analysis and reporting). My work focused on resolving Pydantic model conflicts and ensuring seamless communication between agents using LangChain.",
@@ -157,7 +178,14 @@ export const timelineData: TimelineEntry[] = [
     tags: ["AI"], // <-- ADDED
     description:
       "Configured and fixed a multi-agent QA system powered by Jira and MCP, resolving Pydantic model issues to orchestrate UI/UX testing.",
-    technologies: ["Jira", "Multi-Agent", "Pydantic", "Python","Agentic AI","Orchestration"],
+    technologies: [
+      "Jira",
+      "Multi-Agent",
+      "Pydantic",
+      "Python",
+      "Agentic AI",
+      "Orchestration",
+    ],
     caseStudyTitle: "Jira-Powered QA Agent Configuration",
     caseStudyContent:
       "For the same client, I configured a separate multi-agent system designed to orchestrate UI/UX testing by interacting with Jira. The primary challenge was debugging and resolving Pydantic model incompatibilities that prevented the agents from communicating correctly.",
