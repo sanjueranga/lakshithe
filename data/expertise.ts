@@ -10,7 +10,7 @@ export interface ExpertiseCategory {
 
 export const expertiseData: ExpertiseCategory[] = [
   {
-    title: "AI & ML",
+    title: "AI",
     skills: [
       { name: "FastAPI" },
       { name: "Python" },
@@ -29,7 +29,7 @@ export const expertiseData: ExpertiseCategory[] = [
     ],
   },
   {
-    title: "Backend",
+    title: "Backend & ARchitecture",
     skills: [
       { name: "Python" },
       { name: "Typescript" },
@@ -41,6 +41,9 @@ export const expertiseData: ExpertiseCategory[] = [
       { name: "REST APIs" },
       { name: "GraphQL" },
       { name: "Payment Gateways" },
+      { name: "WebSockets" },
+      { name: "Multi-Tenancy" },
+      { name: "Authorization" },
     ],
   },
   {

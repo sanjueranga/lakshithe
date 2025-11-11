@@ -53,17 +53,18 @@ export function HeroSection() {
         {/* --- Left Column (Text Content) --- */}
         <div className="text-left row-start-2 lg:row-start-auto">
           {/* Headline - Split for emphasis */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-foreground tracking-tighter">
-            <span className="block">AI Architect &</span>
+          <h1 className=" sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-foreground tracking-tighter">
+            <span className="block lg:text-5xl">AI SaaS Architect &</span>
             <span className="block text-primary">Full-Stack Developer</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            I build intelligent, end-to-end applications — from complex backends
-            to AI-driven features.
+            I partner with founders to build intelligent, production-ready SaaS
+            MVPs.
           </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            Explore how I design systems that learn, scale, and evolve.
+            Explore my work in complex backends, scalable DevOps, and advanced
+            AI.
           </p>
 
           {/* --- Buttons --- */}
