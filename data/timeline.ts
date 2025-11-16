@@ -193,6 +193,26 @@ export const timelineData: TimelineEntry[] = [
     liveUrl: "#",
   },
   {
+    id: "ice-2025-bootcamp",
+    year: "2025",
+    title: "ICE 2025 Entrepreneurial Boot Camp",
+    subtitle: "Achievement",
+    icon: "star",
+    description:
+      "An intensive 3-day boot camp on creativity, design thinking, and entrepreneurship by NUS Professor Suranga Nanayakkar. Selected from among the best students from Sri Lankan universities with only 6% acceptance rate.",
+    technologies: [
+      "Entrepreneurship",
+      "Design Thinking",
+      "Creativity",
+      "Leadership",
+    ],
+    caseStudyTitle: "ICE 2025 Entrepreneurial Boot Camp",
+    caseStudyContent:
+      "Selected as one of the top 6% of applicants from leading Sri Lankan universities, I participated in an intensive 3-day entrepreneurship boot camp led by NUS Professor Suranga Nanayakkar. The program focused on fostering creativity, design thinking principles, and practical entrepreneurship skills.",
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+  {
     id: "testimonial-faithfulnes",
     type: "testimonial",
     quote: "He is the best Django guy i have worked with",
