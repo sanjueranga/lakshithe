@@ -29,7 +29,7 @@ export const expertiseData: ExpertiseCategory[] = [
     ],
   },
   {
-    title: "Backend & ARchitecture",
+    title: "Backend & Architecture",
     skills: [
       { name: "Python" },
       { name: "Typescript" },

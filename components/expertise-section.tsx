@@ -104,7 +104,7 @@ export function ExpertiseSection() {
                     Taino Spain S.L
                   </p>
                   <time className="text-sm font-normal leading-none text-muted-foreground/80">
-                    2025 - Present (Intern)
+                    2025- 4 Months (Intern)
                   </time>
                 </li>
                 <li className="ml-8">

@@ -31,31 +31,6 @@ export type TimelineEntry = TimelineItemData | TestimonialData;
 export const timelineData: TimelineEntry[] = [
   // --- 2025 ---
   {
-    id: "rag-chatbot-2025",
-    year: "2025 (In Progress)",
-    title: "Multi-Platform RAG Chatbot",
-    subtitle: "@ Taino Spain S.L",
-    icon: "code",
-    tags: ["AI"], // <-- ADDED
-    description:
-      "Developing a multi-platform RAG chatbot (WhatsApp, Instagram, Web) using FastAPI, LangChain, and vector databases.",
-    technologies: [
-      "FastAPI",
-      "LangChain",
-      "RAG",
-      "VectorDB",
-      "Python",
-      "LLM",
-      "Prompt Engineering",
-      "Docker",
-    ],
-    caseStudyTitle: "Building a Multi-Platform RAG Chatbot",
-    caseStudyContent:
-      "This in-progress project involves architecting a sophisticated RAG system to handle queries from multiple sources. The goal is to create a unified AI assistant that can be accessed via WhatsApp, Instagram, and a web interface, all powered by a single FastAPI backend and a Graph RAG implementation for complex, contextual answers.",
-    githubUrl: "#",
-    liveUrl: "#",
-  },
-  {
     id: "mixtape-saas-2025",
     year: "2025 (In Progress)",
     title: "AI Backend (Mixtape SaaS)",
@@ -79,8 +54,33 @@ export const timelineData: TimelineEntry[] = [
     liveUrl: "#",
   },
   {
+    id: "rag-chatbot-2025",
+    year: "2025",
+    title: "Multi-Platform RAG Chatbot",
+    subtitle: "@ Taino Spain S.L",
+    icon: "code",
+    tags: ["AI"], // <-- ADDED
+    description:
+      "Developing a multi-platform RAG chatbot (WhatsApp, Instagram, Web) using FastAPI, LangChain, and vector databases.",
+    technologies: [
+      "FastAPI",
+      "LangChain",
+      "RAG",
+      "VectorDB",
+      "Python",
+      "LLM",
+      "Prompt Engineering",
+      "Docker",
+    ],
+    caseStudyTitle: "Building a Multi-Platform RAG Chatbot",
+    caseStudyContent:
+      "This in-progress project involves architecting a sophisticated RAG system to handle queries from multiple sources. The goal is to create a unified AI assistant that can be accessed via WhatsApp, Instagram, and a web interface, all powered by a single FastAPI backend and a Graph RAG implementation for complex, contextual answers.",
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+  {
     id: "research-transfer-learning-2025",
-    year: "2025 (In Progress)",
+    year: "2025",
     title: "Optimizing Transfer Learning",
     subtitle: "University Research",
     icon: "graduationCap",
