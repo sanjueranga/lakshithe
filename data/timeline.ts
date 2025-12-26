@@ -33,10 +33,10 @@ export const timelineData: TimelineEntry[] = [
   {
     id: "mixtape-saas-2025",
     year: "2025 (In Progress)",
-    title: "Lead Backend Engineer & Architect (Mixtape SaaS)",
-    subtitle: "Upwork Project",
+    title: "Lead Backend Engineer & Architect",
+    subtitle: "Mixtape AI SaaS (Contract)",
     icon: "code",
-    tags: ["AI", "Web"], // <-- ADDEDrag
+    tags: ["AI", "Web"], 
     description:
       "Architecting a production-grade SaaS backend: event-driven services, AI pipeline orchestration, secure file storage, and DevOps (CI/CD, containerization, observability). Responsible for API design, job queues, background workers, and scalable infra to support AI video generation and data workflows.",
     technologies: [
