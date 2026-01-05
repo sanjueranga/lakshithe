@@ -29,6 +29,22 @@ export type TimelineEntry = TimelineItemData | TestimonialData;
 
 // Export the data array
 export const timelineData: TimelineEntry[] = [
+  // --- 2026 ---
+  {
+    id: "upwork-top-rated-2026",
+    year: "2026",
+    title: "Upwork Top Rated",
+    subtitle: "Achievement",
+    icon: "star",
+    description:
+      "Achieved Upwork Top Rated status, recognized for exceptional client satisfaction, timely delivery, and high-quality work across multiple projects.",
+    technologies: ["Freelancing", "Client Relations", "Project Excellence"],
+    caseStudyTitle: "",
+    caseStudyContent: "",
+    githubUrl: "",
+    liveUrl: "https://www.upwork.com/freelancers/~013fa9079ef42bd1b1",
+  },
+
   // --- 2025 ---
   {
     id: "mixtape-saas-2025",
@@ -36,7 +52,7 @@ export const timelineData: TimelineEntry[] = [
     title: "Lead Backend Engineer & Architect",
     subtitle: "Mixtape AI SaaS (Contract)",
     icon: "code",
-    tags: ["AI", "Web"], 
+    tags: ["AI", "Web"],
     description:
       "Architecting a production-grade SaaS backend: event-driven services, AI pipeline orchestration, secure file storage, and DevOps (CI/CD, containerization, observability). Responsible for API design, job queues, background workers, and scalable infra to support AI video generation and data workflows.",
     technologies: [
