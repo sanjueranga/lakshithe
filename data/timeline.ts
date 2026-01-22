@@ -29,23 +29,6 @@ export type TimelineEntry = TimelineItemData | TestimonialData;
 
 // Export the data array
 export const timelineData: TimelineEntry[] = [
-  // --- 2026 ---
-  {
-    id: "upwork-top-rated-2026",
-    year: "2026",
-    title: "Upwork Top Rated",
-    subtitle: "Achievement",
-    icon: "star",
-    description:
-      "Achieved Upwork Top Rated status, recognized for exceptional client satisfaction, timely delivery, and high-quality work across multiple projects.",
-    technologies: ["Freelancing", "Client Relations", "Project Excellence"],
-    caseStudyTitle: "",
-    caseStudyContent: "",
-    githubUrl: "",
-    liveUrl: "https://www.upwork.com/freelancers/~013fa9079ef42bd1b1",
-  },
-
-  // --- 2025 ---
   {
     id: "mixtape-saas-2025",
     year: "2025 (In Progress)",
@@ -69,6 +52,41 @@ export const timelineData: TimelineEntry[] = [
     githubUrl: "#",
     liveUrl: "#",
   },
+  {
+    id: "my-dresser-2025",
+    year: "2025 (In Progress)",
+    title: "Backend Engineer & AI Developer",
+    subtitle: "MyDresser - Upwork Project",
+    icon: "code",
+    tags: ["AI", "Web"],
+    description:
+      "Building a virtual try-on app with AI-powered features. Responsible for backend development and AI implementation, making the system production-ready, fixing bugs, and ensuring scalable development practices.",
+    technologies: ["Django", "Google Generative AI", "Python", "AI", "Backend"],
+    caseStudyTitle: "Virtual Try-On App with AI",
+    caseStudyContent:
+      "Developing a virtual try-on application that leverages AI to provide a realistic fitting experience. As the backend engineer and AI developer, I'm building the AI features to power the virtual try-on functionality, ensuring the system is production-ready, fixing bugs, and implementing scalable development practices to support future growth.",
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+
+  // --- 2026 ---
+  {
+    id: "upwork-top-rated-2026",
+    year: "2026",
+    title: "Upwork Top Rated",
+    subtitle: "Achievement",
+    icon: "star",
+    description:
+      "Achieved Upwork Top Rated status, recognized for exceptional client satisfaction, timely delivery, and high-quality work across multiple projects.",
+    technologies: ["Freelancing", "Client Relations", "Project Excellence"],
+    caseStudyTitle: "",
+    caseStudyContent: "",
+    githubUrl: "",
+    liveUrl: "https://www.upwork.com/freelancers/~013fa9079ef42bd1b1",
+  },
+
+  // --- 2025 ---
+
   {
     id: "rag-chatbot-2025",
     year: "2025",
