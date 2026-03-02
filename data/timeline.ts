@@ -29,6 +29,29 @@ export type TimelineEntry = TimelineItemData | TestimonialData;
 
 // Export the data array
 export const timelineData: TimelineEntry[] = [
+  // --- 2026 ---
+  {
+    id: "testimonial-marianne-2026",
+    type: "testimonial",
+    quote:
+      "Lakshitha is a very dedicated supportive intelligent developer to work with, highly recommended for projects with tight schedule. His skills in AI is excellent and delivered a very good job!",
+    author: "Marianne (Client on Upwork)",
+  },
+  {
+    id: "university-honours-2026",
+    year: "Feb 2026",
+    title: "1st Class Honours & Academic Excellence Awards",
+    subtitle: "University of Peradeniya",
+    icon: "graduationCap",
+    description:
+      "Graduated with First Class Honours in Computer Science, receiving multiple university awards for academic excellence and outstanding performance throughout the degree program.",
+    technologies: ["Computer Science", "Academic Excellence", "Leadership"],
+    caseStudyTitle: "First Class Honours in Computer Science",
+    caseStudyContent:
+      "Achieved First Class Honours in Computer Science from the University of Peradeniya. This achievement recognizes consistent academic excellence, research contributions, and leadership within the university's technical community.",
+    githubUrl: "#",
+    liveUrl: "#",
+  },
   {
     id: "mixtape-saas-2025",
     year: "2025 (In Progress)",
