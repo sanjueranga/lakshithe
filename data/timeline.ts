@@ -6,7 +6,7 @@ export interface TimelineItemData {
   year: string;
   title: string;
   subtitle?: string;
-  icon: "briefcase" | "code" | "star" | "graduationCap";
+  icon: "briefcase" | "code" | "star" | "graduationCap" | "award" | "bookOpen";
   tags?: ("AI" | "Web")[]; // <-- ADDED THIS FIELD
   description: string;
   technologies: string[];
@@ -42,7 +42,7 @@ export const timelineData: TimelineEntry[] = [
     year: "Feb 2026",
     title: "1st Class Honours & Academic Excellence Awards",
     subtitle: "University of Peradeniya",
-    icon: "graduationCap",
+    icon: "award",
     description:
       "Graduated with First Class Honours in Computer Science, receiving multiple university awards for academic excellence and outstanding performance throughout the degree program.",
     technologies: ["Computer Science", "Academic Excellence", "Leadership"],
@@ -140,7 +140,7 @@ export const timelineData: TimelineEntry[] = [
     year: "2025",
     title: "Optimizing Transfer Learning",
     subtitle: "University Research",
-    icon: "graduationCap",
+    icon: "bookOpen",
     tags: ["AI"], // <-- ADDED
     description:
       "Researching PEFT methods and fine-tuning for optimizing transfer learning in low-resource medical imaging using Vision Transformers (ViTs).",

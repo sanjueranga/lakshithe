@@ -7,6 +7,8 @@ import {
   Code,
   Star,
   GraduationCap,
+  Award,
+  BookOpen,
 } from "lucide-react";
 
 interface TimelineItemProps {
@@ -27,6 +29,8 @@ export function TimelineItem({
     code: Code,
     star: Star,
     graduationCap: GraduationCap,
+    award: Award,
+    bookOpen: BookOpen,
   };
 
   const IconComponent = iconMap[item.icon as keyof typeof iconMap] || Briefcase;
