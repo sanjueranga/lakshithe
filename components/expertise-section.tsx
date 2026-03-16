@@ -31,13 +31,13 @@ export function ExpertiseSection() {
       (item) =>
         item.type !== "testimonial" &&
         (item as TimelineItemData).technologies &&
-        (item as TimelineItemData).technologies.includes(skillName)
+        (item as TimelineItemData).technologies.includes(skillName),
     );
 
     if (foundItem) {
       // --- NEW: Dispatch a custom event with the ID ---
       window.dispatchEvent(
-        new CustomEvent("skillClick", { detail: { id: foundItem.id } })
+        new CustomEvent("skillClick", { detail: { id: foundItem.id } }),
       );
       // We also scroll immediately
       scrollToTimelineId(foundItem.id);
@@ -93,6 +93,20 @@ export function ExpertiseSection() {
                 Experience
               </h3>
               <ol className="relative border-l border-border  space-y-16">
+                <li className="ml-8">
+                  <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-background">
+                    <Briefcase className="w-3 h-3 text-primary-foreground" />
+                  </span>
+                  <h4 className="text-lg font-semibold text-foreground">
+                    Lead Backend and Infrastructure Engineer
+                  </h4>
+                  <p className="text-base font-normal text-muted-foreground mb-1">
+                    Social Generation inc.
+                  </p>
+                  <time className="text-sm font-normal leading-none text-muted-foreground/80">
+                    2025 June - Present
+                  </time>
+                </li>
                 <li className="ml-8">
                   <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-background">
                     <Briefcase className="w-3 h-3 text-primary-foreground" />

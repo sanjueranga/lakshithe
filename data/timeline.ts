@@ -77,7 +77,7 @@ export const timelineData: TimelineEntry[] = [
   },
   {
     id: "my-dresser-2025",
-    year: "2025 (In Progress)",
+    year: "2025",
     title: "Backend Engineer & AI Developer",
     subtitle: "MyDresser - Upwork Project",
     icon: "code",
