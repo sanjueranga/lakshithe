@@ -44,7 +44,7 @@ export const timelineData: TimelineEntry[] = [
     subtitle: "University of Peradeniya",
     icon: "award",
     description:
-      "Graduated with First Class Honours in Computer Science, receiving multiple university awards for academic excellence and outstanding performance throughout the degree program.",
+      "First Class Honours in Computer Science, receiving multiple university awards for academic excellence and outstanding performance throughout the degree program.",
     technologies: ["Computer Science", "Academic Excellence", "Leadership"],
     caseStudyTitle: "First Class Honours in Computer Science",
     caseStudyContent:
