@@ -44,11 +44,11 @@ export const timelineData: TimelineEntry[] = [
     subtitle: "University of Peradeniya",
     icon: "award",
     description:
-      "First Class Honours in Computer Science, receiving multiple university awards for academic excellence and outstanding performance throughout the degree program.",
+      "First Class Honours in Computer Science, receiving university awards for academic excellence and outstanding performance throughout the degree program.",
     technologies: ["Computer Science", "Academic Excellence", "Leadership"],
     caseStudyTitle: "First Class Honours in Computer Science",
     caseStudyContent:
-      "Achieved First Class Honours in Computer Science from the University of Peradeniya. This achievement recognizes consistent academic excellence, research contributions, and leadership within the university's technical community.",
+      "Achieved First Class Honours in Computer Science from the University of Peradeniya. This achievement recognizes consistent academic excellence across all four years of study. Alongside my academic focus, I served as the President of the Computer Society (CSUP), where I developed strong leadership skills by organizing major events and coordinating technical initiatives. I also gained significant research experience, particularly in optimizing transfer learning for medical imaging, demonstrating a balanced commitment to academic rigor, technical research, and community leadership.",
     githubUrl: "#",
     liveUrl: "#",
   },
