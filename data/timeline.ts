@@ -55,7 +55,7 @@ export const timelineData: TimelineEntry[] = [
   {
     id: "mixtape-saas-2025",
     year: "2025 (In Progress)",
-    title: "Lead Backend Engineer & Architect",
+    title: "AI powered Marketing Video Storytelling Generation ",
     subtitle: "Mixtape AI SaaS (Contract)",
     icon: "code",
     tags: ["AI", "Web"],
@@ -78,7 +78,7 @@ export const timelineData: TimelineEntry[] = [
   {
     id: "my-dresser-2025",
     year: "2025",
-    title: "Backend Engineer & AI Developer",
+    title: "Virtual Try-On App with AI",
     subtitle: "MyDresser - Upwork Project",
     icon: "code",
     tags: ["AI", "Web"],
