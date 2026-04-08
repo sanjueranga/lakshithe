@@ -31,29 +31,30 @@ export type TimelineEntry = TimelineItemData | TestimonialData;
 export const timelineData: TimelineEntry[] = [
   // --- 2026 ---
   {
-    id: "testimonial-marianne-2026",
-    type: "testimonial",
-    quote:
-      "Lakshitha is a very dedicated supportive intelligent developer to work with, highly recommended for projects with tight schedule. His skills in AI is excellent and delivered a very good job!",
-    author: "Marianne (Client on Upwork)",
-  },
-  {
-    id: "university-honours-2026",
-    year: "Feb 2026",
-    title: "1st Class Honours & Academic Excellence Awards",
-    subtitle: "University of Peradeniya",
-    icon: "award",
+    id: "samaja-ai-2026",
+    year: "2026 (In Progress)",
+    title: "SamajaAI - EdTech Voice Agent",
+    subtitle: "Lead Developer & Architect",
+    icon: "code",
+    tags: ["AI", "Web"],
     description:
-      "First Class Honours in Computer Science, receiving university awards for academic excellence and outstanding performance throughout the degree program.",
-    technologies: ["Computer Science", "Academic Excellence", "Leadership"],
-    caseStudyTitle: "First Class Honours in Computer Science",
+      "Partnering with a visionary founder to transform an existing prototype into a scalable, production-ready MVP. Leading architectural decisions for a secure EdTech platform specializing in AI voice agents via ElevenLabs integration.",
+    technologies: [
+      "AI Voice Agents",
+      "ElevenLabs",
+      "Architecture",
+      "EdTech",
+      "Security",
+      "Scalability",
+    ],
+    caseStudyTitle: "Architecting a Production-Ready EdTech Voice Agent",
     caseStudyContent:
-      "Achieved First Class Honours in Computer Science from the University of Peradeniya. This achievement recognizes consistent academic excellence across all four years of study. Alongside my academic focus, I served as the President of the Computer Society (CSUP), where I developed strong leadership skills by organizing major events and coordinating technical initiatives. I also gained significant research experience, particularly in optimizing transfer learning for medical imaging, demonstrating a balanced commitment to academic rigor, technical research, and community leadership.",
+      "Collaborating closely with the founder of SamajaAI to transition their working prototype into a robust, production-ready MVP. My responsibilities include making critical architectural design choices to ensure long-term scalability and security. The core of the platform features a specialized AI voice agent tailored for the EdTech sector, heavily leveraging ElevenLabs integration for hyper-realistic and engaging learning interactions.",
     githubUrl: "#",
     liveUrl: "#",
   },
   {
-    id: "mixtape-saas-2025",
+    id: "mixtape-saas-2026",
     year: "2025 (In Progress)",
     title: "AI powered Marketing Video Storytelling Generation ",
     subtitle: "Mixtape AI SaaS (Contract)",
@@ -75,6 +76,29 @@ export const timelineData: TimelineEntry[] = [
     githubUrl: "#",
     liveUrl: "#",
   },
+  {
+    id: "testimonial-marianne-2026",
+    type: "testimonial",
+    quote:
+      "Lakshitha is a very dedicated supportive intelligent developer to work with, highly recommended for projects with tight schedule. His skills in AI is excellent and delivered a very good job!",
+    author: "Marianne (Client on Upwork)",
+  },
+  {
+    id: "university-honours-2026",
+    year: "Feb 2026",
+    title: "1st Class Honours & Academic Excellence Awards",
+    subtitle: "University of Peradeniya",
+    icon: "award",
+    description:
+      "First Class Honours in Computer Science, receiving university awards for academic excellence and outstanding performance throughout the degree program.",
+    technologies: ["Computer Science", "Academic Excellence", "Leadership"],
+    caseStudyTitle: "First Class Honours in Computer Science",
+    caseStudyContent:
+      "Achieved First Class Honours in Computer Science from the University of Peradeniya. This achievement recognizes consistent academic excellence across all four years of study. Alongside my academic focus, I served as the President of the Computer Society (CSUP), where I developed strong leadership skills by organizing major events and coordinating technical initiatives. I also gained significant research experience, particularly in optimizing transfer learning for medical imaging, demonstrating a balanced commitment to academic rigor, technical research, and community leadership.",
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+
   {
     id: "my-dresser-2025",
     year: "2025",
