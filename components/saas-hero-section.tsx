@@ -1,7 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Briefcase, Users, Zap } from "lucide-react"
+import { Briefcase, Users, Award } from "lucide-react"
+import Image from "next/image"
 
 const scrollTo = (id: string) => {
   const element = document.getElementById(id)
@@ -19,17 +20,38 @@ const scrollTo = (id: string) => {
 
 export function SaaSHeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-32 bg-[radial-gradient(ellipse_at_top_right,var(--muted)_0%,var(--background)_70%)]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-32 overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--muted)_0%,var(--background)_70%)]" />
+
+      {/* Sketch image background - positioned on the right */}
+      <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block opacity-5 dark:opacity-[0.03]">
+        <div className="relative w-full h-full">
+          <Image
+            src="/lakshitha.png"
+            alt="Background sketch"
+            fill
+            className="object-cover object-left grayscale"
+            style={{
+              filter: 'contrast(1.2) brightness(0.9)',
+              maskImage: 'linear-gradient(to left, transparent 0%, black 30%, black 70%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to left, transparent 0%, black 30%, black 70%, transparent 100%)'
+            }}
+            priority
+          />
+        </div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
         {/* Left Column (Text Content) */}
         <div className="text-left">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-foreground tracking-tighter">
-            <span className="block">AI writes the code.</span>
+            <span className="block">You bring the idea.</span>
             <span className="block text-primary">I architect the system.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            I help SaaS founders untangle messy AI prototypes, fix broken logic, and build scalable, production-ready backend infrastructure.
+            I help founders untangle messy AI prototypes, fix broken logic, and build scalable, production-ready backend infrastructure.
           </p>
 
           {/* CTAs */}
@@ -68,10 +90,10 @@ export function SaaSHeroSection() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Zap className="w-7 h-7 text-primary" />
+              <Award className="w-7 h-7 text-primary" />
               <div>
-                <span className="text-2xl font-bold text-foreground">AI + Backend</span>
-                <p className="text-sm text-muted-foreground">Specialization</p>
+                <span className="text-3xl font-bold text-foreground">5+</span>
+                <p className="text-sm text-muted-foreground">Years Experience</p>
               </div>
             </div>
           </div>
@@ -105,11 +127,11 @@ export function SaaSHeroSection() {
 
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-primary" />
+                  <Award className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <span className="text-2xl font-bold text-foreground">AI Integration</span>
-                  <p className="text-sm text-muted-foreground">& Backend Scale</p>
+                  <span className="text-4xl font-bold text-foreground">5+</span>
+                  <p className="text-sm text-muted-foreground">Years of Experience</p>
                 </div>
               </div>
             </div>
