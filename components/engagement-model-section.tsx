@@ -1,6 +1,7 @@
 "use client"
 
 import { MessageSquare, Zap, Users, DollarSign } from "lucide-react"
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/fade-in"
 
 export function EngagementModelSection() {
   return (
@@ -8,7 +9,7 @@ export function EngagementModelSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
-          <div>
+          <FadeIn direction="left">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               How We Work: <br />
               <span className="text-primary">Architect with Vision</span>
@@ -21,8 +22,8 @@ export function EngagementModelSection() {
             </p>
 
             {/* Benefits List */}
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
+            <StaggerContainer className="space-y-6">
+              <StaggerItem className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <MessageSquare className="w-6 h-6 text-primary" />
                 </div>
@@ -34,9 +35,9 @@ export function EngagementModelSection() {
                     No account managers or project coordinators. You work directly with the architect who understands your system.
                   </p>
                 </div>
-              </div>
+              </StaggerItem>
 
-              <div className="flex items-start gap-4">
+              <StaggerItem className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Zap className="w-6 h-6 text-primary" />
                 </div>
@@ -48,9 +49,9 @@ export function EngagementModelSection() {
                     Critical fixes and architecture decisions happen in days, not weeks. No bureaucracy, just action.
                   </p>
                 </div>
-              </div>
+              </StaggerItem>
 
-              <div className="flex items-start gap-4">
+              <StaggerItem className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Users className="w-6 h-6 text-primary" />
                 </div>
@@ -62,9 +63,9 @@ export function EngagementModelSection() {
                     One-off rescue sprints, ongoing architecture support, or full-scale builds. Scale up or down as needed.
                   </p>
                 </div>
-              </div>
+              </StaggerItem>
 
-              <div className="flex items-start gap-4">
+              <StaggerItem className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <DollarSign className="w-6 h-6 text-primary" />
                 </div>
@@ -76,12 +77,12 @@ export function EngagementModelSection() {
                     Fixed-scope packages with clear deliverables. No surprise invoices or scope creep.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
+              </StaggerItem>
+            </StaggerContainer>
+          </FadeIn>
 
           {/* Right Column - Visual */}
-          <div className="hidden lg:flex items-center justify-center">
+          <FadeIn direction="right" className="hidden lg:flex items-center justify-center">
             <div className="w-full max-w-md p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl border border-primary/20">
               <div className="text-center">
                 <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
@@ -95,7 +96,7 @@ export function EngagementModelSection() {
                 </p>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

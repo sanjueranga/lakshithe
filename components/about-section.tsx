@@ -2,6 +2,7 @@
 
 import { Github, Linkedin } from "lucide-react"
 import Image from "next/image"
+import { FadeIn } from "@/components/fade-in"
 
 const UpworkIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -24,7 +25,7 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Photo */}
-          <div className="flex justify-center lg:justify-start">
+          <FadeIn direction="left" className="flex justify-center lg:justify-start">
             <div className="relative w-full max-w-sm">
               {/* Background glow effect */}
               <div
@@ -48,10 +49,10 @@ export function AboutSection() {
                 style={imageShapeStyle}
               ></div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right Column - Bio */}
-          <div>
+          <FadeIn direction="right" delay={0.1}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Meet Eranga
             </h2>
@@ -97,7 +98,7 @@ export function AboutSection() {
                 <UpworkIcon className="size-8" />
               </a>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

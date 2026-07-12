@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image"; // Import next/image for better performance
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/fade-in";
 
 const blogPosts = [
   {
@@ -44,78 +45,81 @@ export function BlogSection() {
     <section className="py-24 px-4 bg-background" id="blog">
       <div className="max-w-6xl mx-auto">
         {/* --- Centered Title & Subtitle --- */}
-        <h2 className="text-4xl font-bold mb-4 text-foreground text-center">
-          From My Blog
-        </h2>
-        <p className="text-lg text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-          I believe in building in public and sharing what I learn. Here are
-          some of my thoughts.
-        </p>
+        <FadeIn direction="up">
+          <h2 className="text-4xl font-bold mb-4 text-foreground text-center">
+            From My Blog
+          </h2>
+          <p className="text-lg text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+            I believe in building in public and sharing what I learn. Here are
+            some of my thoughts.
+          </p>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <Card
-              key={post.id}
-              className="bg-card border-border rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-primary/50 flex flex-col group"
-            >
-              {/* --- Image Link --- */}
-              <a
-                href={post.postUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
+            <StaggerItem key={post.id} className="h-full">
+              <Card
+                className="bg-card border-border rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-primary/50 flex flex-col group h-full"
               >
-                <div className="relative w-full h-48 overflow-hidden">
-                  <Image
-                    src={post.imageUrl || "/placeholder.svg"}
-                    alt={post.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              </a>
-
-              <div className="p-6 flex flex-col flex-1">
-                {/* --- Title Link --- */}
-                <h3 className="text-xl font-semibold mb-3 text-foreground line-clamp-2">
-                  <a
-                    href={post.postUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    {post.title}
-                  </a>
-                </h3>
-
-                <p className="text-muted-foreground text-sm mb-6 flex-1 line-clamp-3">
-                  {post.description}
-                </p>
-
-                {/* --- Card Button Link (FIXED) --- */}
-                <Button
-                  asChild
-                  variant="outline"
-                  className="w-full border-primary text-primary hover:bg-primary/10"
+                {/* --- Image Link --- */}
+                <a
+                  href={post.postUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
                 >
-                  <a
-                    href={post.postUrl} // <-- FIXED
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2"
+                  <div className="relative w-full h-48 overflow-hidden">
+                    <Image
+                      src={post.imageUrl || "/placeholder.svg"}
+                      alt={post.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div className="p-6 flex flex-col flex-1">
+                  {/* --- Title Link --- */}
+                  <h3 className="text-xl font-semibold mb-3 text-foreground line-clamp-2">
+                    <a
+                      href={post.postUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      {post.title}
+                    </a>
+                  </h3>
+
+                  <p className="text-muted-foreground text-sm mb-6 flex-1 line-clamp-3">
+                    {post.description}
+                  </p>
+
+                  {/* --- Card Button Link (FIXED) --- */}
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full border-primary text-primary hover:bg-primary/10"
                   >
-                    Read Article
-                    <ExternalLink size={16} />
-                  </a>
-                </Button>
-              </div>
-            </Card>
+                    <a
+                      href={post.postUrl} // <-- FIXED
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      Read Article
+                      <ExternalLink size={16} />
+                    </a>
+                  </Button>
+                </div>
+              </Card>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
         {/* --- NEW: "Read More" Button --- */}
-        <div className="text-center mt-16">
+        <FadeIn direction="up" delay={0.1} className="text-center mt-16">
           <Button
             asChild
             size="lg"
@@ -129,7 +133,7 @@ export function BlogSection() {
               View All Posts on Medium
             </a>
           </Button>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );
