@@ -94,6 +94,7 @@ export function TimelineSection({
                         <TestimonialCard
                           quote={(item as TestimonialData).quote}
                           author={(item as TestimonialData).author}
+                          rating={(item as TestimonialData).rating}
                         />
                       </div>
                     </div>

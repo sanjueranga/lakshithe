@@ -69,12 +69,12 @@ export function SaaSHeroSection() {
 
             {/* Large artistic image */}
             <Image
-              src="/lakshitha.png"
+              src="/lakshitha-hero.png"
               alt="Portrait"
               width={700}
               height={700}
               priority
-              className="relative w-full object-cover shadow-2xl aspect-square grayscale opacity-20 dark:opacity-15"
+              className="relative w-full object-cover shadow-2xl  grayscale opacity-20 dark:opacity-15"
               style={{
                 ...imageShapeStyle,
                 filter: 'contrast(1.3) brightness(0.9)',

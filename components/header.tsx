@@ -1,14 +1,23 @@
 "use client";
 
+import { useState } from "react";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+  SheetTitle,
+} from "@/components/ui/sheet";
 
 export function Header() {
   const { setTheme, theme } = useTheme();
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   // Helper for smooth scrolling
   const scrollTo = (id: string) => {
@@ -25,6 +34,7 @@ export function Header() {
         behavior: "smooth",
       });
     }
+    setIsOpen(false); // Close mobile menu after navigation
   };
 
   return (
@@ -41,6 +51,7 @@ export function Header() {
 
           {/* --- Right Side: Nav Links & Theme Toggle --- */}
           <div className="flex items-center gap-4">
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6">
               {pathname === "/" && (
                 <>
@@ -94,7 +105,7 @@ export function Header() {
               </Link>
             </nav>
 
-            {/* --- Theme Toggle Button (already included) --- */}
+            {/* --- Theme Toggle Button --- */}
             <Button
               variant="ghost"
               size="icon"
@@ -106,6 +117,76 @@ export function Header() {
               <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
+
+            {/* Mobile Menu */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="md:hidden text-muted-foreground hover:text-foreground"
+                  aria-label="Open menu"
+                >
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                <nav className="flex flex-col gap-6 mt-8">
+                  {pathname === "/" && (
+                    <>
+                      <button
+                        onClick={() => scrollTo("services")}
+                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        Services
+                      </button>
+                      <button
+                        onClick={() => scrollTo("testimonials")}
+                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        Testimonials
+                      </button>
+                      <button
+                        onClick={() => scrollTo("about")}
+                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        About
+                      </button>
+                      <button
+                        onClick={() => scrollTo("contact")}
+                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        Contact
+                      </button>
+                    </>
+                  )}
+                  {pathname === "/journey" && (
+                    <>
+                      <button
+                        onClick={() => scrollTo("journey")}
+                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        Timeline
+                      </button>
+                      <button
+                        onClick={() => scrollTo("blog")}
+                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        Blog
+                      </button>
+                    </>
+                  )}
+                  <Link
+                    href="/journey"
+                    onClick={() => setIsOpen(false)}
+                    className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    My Journey
+                  </Link>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>

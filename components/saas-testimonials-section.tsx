@@ -2,6 +2,13 @@
 
 import { TestimonialCard } from "@/components/testimonial-card"
 import { saasTestimonialsData } from "@/data/saas-testimonials"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel"
 
 export function TestimonialsSection() {
   return (
@@ -15,15 +22,32 @@ export function TestimonialsSection() {
           Real feedback from SaaS founders who were stuck at 90% and needed the last 10%.
         </p>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {saasTestimonialsData.map((testimonial) => (
-            <TestimonialCard
-              key={testimonial.id}
-              quote={testimonial.quote}
-              author={`${testimonial.author}${testimonial.company ? ` - ${testimonial.company}` : ""}`}
-            />
-          ))}
+        {/* Testimonials Carousel */}
+        <div className="relative px-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: false,
+            }}
+            className="w-full max-w-7xl mx-auto"
+          >
+            <CarouselContent className="-ml-4">
+              {saasTestimonialsData.map((testimonial) => (
+                <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <TestimonialCard
+                    quote={testimonial.quote}
+                    author={testimonial.author}
+                    rating={testimonial.rating}
+                    projectName={testimonial.projectName}
+                    company={testimonial.company}
+                    date={testimonial.date}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="max-md:hidden -left-12 border-primary/30 hover:border-primary hover:bg-primary/10" />
+            <CarouselNext className="max-md:hidden -right-12 border-primary/30 hover:border-primary hover:bg-primary/10" />
+          </Carousel>
         </div>
       </div>
     </section>

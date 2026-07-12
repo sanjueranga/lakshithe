@@ -1,6 +1,5 @@
 export interface Skill {
   name: string;
-  // timelineId has been removed
 }
 
 export interface ExpertiseCategory {
@@ -10,11 +9,10 @@ export interface ExpertiseCategory {
 
 export const expertiseData: ExpertiseCategory[] = [
   {
-    title: "AI",
+    title: "AI & ML",
     skills: [
       { name: "FastAPI" },
       { name: "Python" },
-      { name: "Agentic AI" },
       { name: "LLM" },
       { name: "OpenAI API" },
       { name: "LangChain" },
@@ -23,13 +21,10 @@ export const expertiseData: ExpertiseCategory[] = [
       { name: "Transformers" },
       { name: "Fine-Tuning" },
       { name: "Prompt Engineering" },
-      { name: "Automation" },
-      { name: "n8n" },
-      { name: "Orchestration" },
     ],
   },
   {
-    title: "Backend & Architecture",
+    title: "Backend",
     skills: [
       { name: "Python" },
       { name: "Typescript" },
@@ -41,9 +36,6 @@ export const expertiseData: ExpertiseCategory[] = [
       { name: "REST APIs" },
       { name: "GraphQL" },
       { name: "Payment Gateways" },
-      { name: "WebSockets" },
-      { name: "Multi-Tenancy" },
-      { name: "Authorization" },
     ],
   },
   {
@@ -65,7 +57,6 @@ export const expertiseData: ExpertiseCategory[] = [
       { name: "Git" },
       { name: "CI/CD" },
       { name: "AWS" },
-      { name: "supabase" },
     ],
   },
 ];

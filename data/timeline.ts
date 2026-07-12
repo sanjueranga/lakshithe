@@ -22,6 +22,7 @@ export interface TestimonialData {
   type: "testimonial";
   quote: string;
   author: string;
+  rating: 5 | 4 | 3 | 2 | 1;
 }
 
 // Combine them into a single type
@@ -82,6 +83,7 @@ export const timelineData: TimelineEntry[] = [
     quote:
       "Lakshitha is a very dedicated supportive intelligent developer to work with, highly recommended for projects with tight schedule. His skills in AI is excellent and delivered a very good job!",
     author: "Marianne (Client on Upwork)",
+    rating: 5,
   },
   {
     id: "university-honours-2026",
@@ -181,6 +183,7 @@ export const timelineData: TimelineEntry[] = [
     quote:
       "He is so hardworking and good, he keeps to deadlines, Hire him if you have the opportunity you won't regret.",
     author: "Faithfulnes (Client on Upwork)",
+    rating: 5,
   },
   {
     id: "upwork-rising-talent-2025",
@@ -226,6 +229,7 @@ export const timelineData: TimelineEntry[] = [
     quote:
       "It was really good experience and Lakshitha was exceptional in his skills and very hardworking as well to explore new way around.",
     author: "Sachin (Client on Upwork)",
+    rating: 5,
   },
   {
     id: "upwork-multi-agent-2-2025",
@@ -298,6 +302,7 @@ export const timelineData: TimelineEntry[] = [
     type: "testimonial",
     quote: "He is the best Django guy i have worked with",
     author: "Faithfulnes A. (Client on Upwork)",
+    rating: 5,
   },
 
   {

@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AI Architecture Services | Transform AI Code into Production Systems",
+  title: "Lakshitha - SaaS Architect",
   description:
     "I help SaaS founders untangle messy AI prototypes, fix broken logic, and build scalable, production-ready backend infrastructure. From code rescue to deployment.",
 };
