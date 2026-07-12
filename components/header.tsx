@@ -1,11 +1,14 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
   const { setTheme, theme } = useTheme();
+  const pathname = usePathname();
 
   // Helper for smooth scrolling
   const scrollTo = (id: string) => {
@@ -29,40 +32,66 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
         <div className="flex items-center justify-between h-16">
           {/* --- Left Side: Name/Logo --- */}
-          <span
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} // Scroll to top
+          <Link
+            href="/"
             className="text-lg font-bold text-foreground cursor-pointer hover:text-primary transition-colors"
           >
             Lakshitha Eranga
-          </span>
+          </Link>
 
           {/* --- Right Side: Nav Links & Theme Toggle --- */}
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex items-center gap-6">
-              <button
-                onClick={() => scrollTo("skills")}
+              {pathname === "/" && (
+                <>
+                  <button
+                    onClick={() => scrollTo("services")}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Services
+                  </button>
+                  <button
+                    onClick={() => scrollTo("testimonials")}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Testimonials
+                  </button>
+                  <button
+                    onClick={() => scrollTo("about")}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    About
+                  </button>
+                  <button
+                    onClick={() => scrollTo("contact")}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Contact
+                  </button>
+                </>
+              )}
+              {pathname === "/journey" && (
+                <>
+                  <button
+                    onClick={() => scrollTo("journey")}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Timeline
+                  </button>
+                  <button
+                    onClick={() => scrollTo("blog")}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Blog
+                  </button>
+                </>
+              )}
+              <Link
+                href="/journey"
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                Skills
-              </button>
-              <button
-                onClick={() => scrollTo("journey")}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                My work
-              </button>
-              <button
-                onClick={() => scrollTo("blog")}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                Blog
-              </button>
-              <button
-                onClick={() => scrollTo("contact")}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                Contact
-              </button>
+                My Journey
+              </Link>
             </nav>
 
             {/* --- Theme Toggle Button (already included) --- */}

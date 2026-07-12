@@ -1,24 +1,25 @@
 "use client"
 
-import { useState } from "react"
-import { HeroSection } from "@/components/hero-section"
-import { ExpertiseSection } from "@/components/expertise-section"
-import { TimelineSection } from "@/components/timeline-section"
+import { SaaSHeroSection } from "@/components/saas-hero-section"
+import { AgitationSection } from "@/components/agitation-section"
+import { ServicesSection } from "@/components/services-section"
+import { EngagementModelSection } from "@/components/engagement-model-section"
+import { TestimonialsSection } from "@/components/saas-testimonials-section"
+import { AboutSection } from "@/components/about-section"
 import { BlogSection } from "@/components/blog-section"
-import { ContactSection } from "@/components/contact-section"
-import { CaseStudyModal } from "@/components/case-study-modal"
+import { FinalCTASection } from "@/components/final-cta-section"
 
 export default function Home() {
-  const [selectedCaseStudy, setSelectedCaseStudy] = useState<string | null>(null)
-
   return (
     <main className="min-h-screen bg-background">
-      <HeroSection />
-      <ExpertiseSection />
-      <TimelineSection onSelectCaseStudy={setSelectedCaseStudy} />
+      <SaaSHeroSection />
+      <AgitationSection />
+      <ServicesSection />
+      <EngagementModelSection />
+      <TestimonialsSection />
+      <AboutSection />
       <BlogSection />
-      <ContactSection />
-      <CaseStudyModal caseStudyId={selectedCaseStudy} onClose={() => setSelectedCaseStudy(null)} />
+      <FinalCTASection />
     </main>
   )
 }

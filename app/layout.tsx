@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Lakshithe | AI Architect & Full-Stack Developer",
+  title: "AI Architecture Services | Transform AI Code into Production Systems",
   description:
-    "Portfolio of an AI and Full-Stack Developer building intelligent, end-to-end applications",
+    "I help SaaS founders untangle messy AI prototypes, fix broken logic, and build scalable, production-ready backend infrastructure. From code rescue to deployment.",
 };
 
 export default function RootLayout({

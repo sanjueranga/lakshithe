@@ -85,7 +85,7 @@ export function TimelineSection({
                     <div
                       key={item.id}
                       id={item.id}
-                      className="md:flex md:justify-end fade-in-section"
+                      className="md:flex md:justify-end"
                     >
                       {/* FIX 2: Added `w-full pl-12` for mobile.
                         The `md:` classes override this on desktop.
@@ -106,7 +106,7 @@ export function TimelineSection({
                   <div
                     key={item.id}
                     id={item.id}
-                    className="md:flex md:justify-end fade-in-section"
+                    className="md:flex md:justify-end"
                   >
                     {/* FIX 2 (Again): Added `w-full pl-12` for mobile.
                      */}
@@ -130,7 +130,7 @@ export function TimelineSection({
                 <div
                   key={item.id}
                   id={item.id}
-                  className="md:flex md:justify-start fade-in-section"
+                  className="md:flex md:justify-start"
                 >
                   {/* FIX 3: Added `w-full pl-12` for mobile.
                     Kept `md:pr-12` for desktop.
