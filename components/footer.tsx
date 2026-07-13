@@ -69,7 +69,7 @@ export function Footer() {
               <MediumIcon className="size-6" />
             </a>
             <a
-              href="mailto:lakshithe@yahoo.com"
+              href="mailto:lakshitha.eh@gmail.com"
               aria-label="Email"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
