@@ -47,10 +47,11 @@ export function ContactSection() {
     <section className="py-20 px-4 bg-card" id="contact">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-4xl font-bold mb-4 text-foreground text-center">
-          Let's Build Something Great.
+          Get in Touch
         </h2>
         <p className="text-muted-foreground text-center mb-12">
-          Have a project in mind? Let's discuss how we can work together.
+          Happy to talk — whether that&apos;s research collaboration, a system
+          that needs designing, or just a question about something here.
         </p>
 
         <Card className="bg-background border-border p-8">
@@ -108,7 +109,7 @@ export function ContactSection() {
                 required
                 rows={5}
                 className="w-full px-4 py-2 bg-card border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                placeholder="Tell me about your project..."
+                placeholder="What's on your mind?"
               />
             </div>
 

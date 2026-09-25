@@ -2,21 +2,26 @@
 
 import { useState } from "react";
 import { useTheme } from "next-themes";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
-  SheetClose,
   SheetTitle,
 } from "@/components/ui/sheet";
 
+const navLinks = [
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "journey", label: "Journey" },
+  { id: "blog", label: "Writing" },
+  { id: "contact", label: "Contact" },
+];
+
 export function Header() {
   const { setTheme, theme } = useTheme();
-  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   // Helper for smooth scrolling
@@ -53,56 +58,15 @@ export function Header() {
           <div className="flex items-center gap-4">
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6">
-              {pathname === "/" && (
-                <>
-                  <button
-                    onClick={() => scrollTo("services")}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Services
-                  </button>
-                  <button
-                    onClick={() => scrollTo("testimonials")}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Testimonials
-                  </button>
-                  <button
-                    onClick={() => scrollTo("about")}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    About
-                  </button>
-                  <button
-                    onClick={() => scrollTo("contact")}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Contact
-                  </button>
-                </>
-              )}
-              {pathname === "/journey" && (
-                <>
-                  <button
-                    onClick={() => scrollTo("journey")}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Timeline
-                  </button>
-                  <button
-                    onClick={() => scrollTo("blog")}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Blog
-                  </button>
-                </>
-              )}
-              <Link
-                href="/journey"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                My Journey
-              </Link>
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollTo(link.id)}
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </button>
+              ))}
             </nav>
 
             {/* --- Theme Toggle Button --- */}
@@ -133,57 +97,15 @@ export function Header() {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <nav className="flex flex-col gap-6 mt-8">
-                  {pathname === "/" && (
-                    <>
-                      <button
-                        onClick={() => scrollTo("services")}
-                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        Services
-                      </button>
-                      <button
-                        onClick={() => scrollTo("testimonials")}
-                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        Testimonials
-                      </button>
-                      <button
-                        onClick={() => scrollTo("about")}
-                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        About
-                      </button>
-                      <button
-                        onClick={() => scrollTo("contact")}
-                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        Contact
-                      </button>
-                    </>
-                  )}
-                  {pathname === "/journey" && (
-                    <>
-                      <button
-                        onClick={() => scrollTo("journey")}
-                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        Timeline
-                      </button>
-                      <button
-                        onClick={() => scrollTo("blog")}
-                        className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        Blog
-                      </button>
-                    </>
-                  )}
-                  <Link
-                    href="/journey"
-                    onClick={() => setIsOpen(false)}
-                    className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    My Journey
-                  </Link>
+                  {navLinks.map((link) => (
+                    <button
+                      key={link.id}
+                      onClick={() => scrollTo(link.id)}
+                      className="text-left text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {link.label}
+                    </button>
+                  ))}
                 </nav>
               </SheetContent>
             </Sheet>

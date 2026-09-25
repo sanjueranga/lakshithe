@@ -1,16 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-// Import new icons for stats
-import {
-  Github,
-  Linkedin,
-  FileText,
-  Briefcase,
-  Zap,
-  Layers,
-  Users,
-} from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 
 const UpworkIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -25,10 +16,9 @@ const UpworkIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const scrollTo = (id: string) => {
-  // Add a small offset to account for the header height
   const element = document.getElementById(id);
   if (element) {
-    const headerOffset = 64; // 16 * 4 (h-16 in header)
+    const headerOffset = 64;
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -40,57 +30,56 @@ const scrollTo = (id: string) => {
 };
 
 export function HeroSection() {
-  // --- FIXED: Use ONLY borderRadius for the smooth, "cloud-like" shape ---
   const imageShapeStyle = {
     borderRadius: "63% 37% 30% 70% / 50% 45% 55% 50%",
-    // clipPath has been REMOVED.
   };
 
   return (
-    // Use a subtle radial gradient for a modern background feel
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-32 bg-[radial-gradient(ellipse_at_top_right,var(--muted)_0%,var(--background)_70%)]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
-        {/* --- Left Column (Text Content) --- */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        {/* Left Column (Text Content) */}
         <div className="text-left row-start-2 lg:row-start-auto">
-          {/* Headline - Split for emphasis */}
-          <h1 className=" sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-foreground tracking-tighter">
-            <span className="block lg:text-5xl">AI SaaS Architect &</span>
-            <span className="block text-primary">Full-Stack Developer</span>
+          <p className="text-base md:text-lg font-medium text-muted-foreground mb-4">
+            Lakshitha Eranga
+          </p>
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-foreground tracking-tighter">
+            <span className="block">Systems Researcher</span>
+            <span className="block text-primary">&amp; Architect</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            I partner with founders to build intelligent, production-ready SaaS
-            MVPs.
-          </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            Explore my work in complex backends, scalable DevOps, and advanced
-            AI.
+            Computer Science graduate working at the intersection of systems
+            engineering and artificial intelligence. I study how concurrency,
+            scheduling, and memory behaviour shape the performance and cost of AI
+            infrastructure — and I build the systems that run it.
           </p>
 
-          {/* --- Buttons --- */}
+          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 shadow-lg shadow-primary/30"
-              onClick={() => scrollTo("contact")}
+              onClick={() => scrollTo("journey")}
             >
-              Get in Touch
+              My Journey
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10 px-8 bg-transparent"
-              onClick={() => scrollTo("journey")}
+              onClick={() => scrollTo("contact")}
             >
-              See My Work
+              Get in Touch
             </Button>
           </div>
 
-          {/* --- Social Links --- */}
+          {/* Social Links */}
           <div className="flex gap-6">
             <a
               href="https://github.com/sanjueranga"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="GitHub"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
@@ -99,15 +88,16 @@ export function HeroSection() {
             <a
               href="https://www.linkedin.com/in/lakshithe/"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Linkedin size={24} />
             </a>
-
             <a
               href="https://www.upwork.com/freelancers/~013fa9079ef42bd1b1?mp_source=share"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="Upwork"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
@@ -116,65 +106,33 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* --- Right Column (Image + Floating Stats) --- */}
-        {/* On mobile, this will stack first (row-start-1) */}
-        <div className="relative w-full row-start-1 lg:row-start-auto flex justify-center lg:justify-start ">
-          {/* Image Wrapper */}
-          <div className="relative w-full max-w-sm">
-            {/* Subtle background glow effect - NOW CLIPPED */}
+        {/* Right Column (Portrait) */}
+        <div className="relative w-full row-start-1 lg:row-start-auto flex justify-center lg:justify-end">
+          <div className="relative w-full max-w-md lg:max-w-lg">
+            {/* Background glow effect */}
             <div
-              className="absolute -inset-2.5 bg-linear-to-r from-primary to-emerald-600 blur-lg opacity-30 dark:opacity-20 animate-pulse-slow"
-              style={imageShapeStyle} // Apply the curved shape
-            ></div>
-
-            {/* Image Placeholder - NOW CLIPPED and SQUARE */}
-            <Image
-              src="/lakshitha.png"
-              alt="Portrait of the developer"
-              width={400} // Changed to 400
-              height={400} // Changed to 400
-              priority // Add priority for LCP
-              className="relative w-full object-cover shadow-2xl aspect-square" // Changed to aspect-square
-              style={imageShapeStyle} // Apply the curved shape
+              className="absolute -inset-8 bg-gradient-to-r from-primary to-emerald-600 blur-3xl opacity-20 dark:opacity-10"
+              style={imageShapeStyle}
             />
 
-            {/* --- NEW: Dark Overlay --- */}
-            {/* This div sits on top of the image to reduce brightness */}
-            <div
-              className="absolute inset-0 bg-black/4 dark:bg-black/20 sition-colors duration-300"
-              style={imageShapeStyle} // Apply the same curved shape
-            ></div>
-          </div>
+            <Image
+              src="/lakshitha-hero.png"
+              alt="Portrait"
+              width={700}
+              height={700}
+              priority
+              className="relative w-full object-cover shadow-2xl grayscale opacity-20 dark:opacity-15"
+              style={{
+                ...imageShapeStyle,
+                filter: "contrast(1.3) brightness(0.9)",
+              }}
+            />
 
-          {/* --- Floating Stats Section --- */}
-          {/* (This part remains the same) */}
-          <div
-            className="w-full max-w-sm lg:max-w-none flex flex-wrap gap-8 sm:gap-12 justify-center mt-12
-                         lg:absolute  lg:-translate-y-1-2 lg:left-[80%] lg:w-48 
-                         lg:mt-9 lg:flex-col lg:gap-10 lg:p-6 
-                         lg:bg-card/50 lg:dark:bg-card/30 lg:rounded-xl lg:border lg:border-border/50 lg:backdrop-blur-lg"
-          >
-            <div className="flex items-center gap-3">
-              <Zap className="w-7 h-7 text-primary" />
-              <div>
-                <span className="text-3xl font-bold text-foreground">4+</span>
-                <p className="text-sm text-muted-foreground">Years Exp.</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <Layers className="w-7 h-7 text-primary" />
-              <div>
-                <span className="text-3xl font-bold text-foreground">10+</span>
-                <p className="text-sm text-muted-foreground">Projects</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <Users className="w-7 h-7 text-primary" />
-              <div>
-                <span className="text-3xl font-bold text-foreground">5+</span>
-                <p className="text-sm text-muted-foreground">Clients</p>
-              </div>
-            </div>
+            {/* Overlay for depth */}
+            <div
+              className="absolute inset-0 bg-black/5 dark:bg-black/10 transition-colors duration-300"
+              style={imageShapeStyle}
+            />
           </div>
         </div>
       </div>

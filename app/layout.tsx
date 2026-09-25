@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Lakshitha - SaaS Architect",
+  title: "Lakshitha Eranga — Systems Researcher & Architect",
   description:
-    "I help SaaS founders untangle messy AI prototypes, fix broken logic, and build scalable, production-ready backend infrastructure. From code rescue to deployment.",
+    "Computer Science graduate working at the intersection of systems engineering and artificial intelligence. Research on concurrency, scheduling, and the cost of AI infrastructure, alongside hands-on work building distributed backends and AI pipelines.",
 };
 
 export default function RootLayout({

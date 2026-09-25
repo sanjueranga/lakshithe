@@ -58,13 +58,13 @@ export function AboutSection() {
             </h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed mb-8">
               <p>
-                I am a <span className="text-foreground font-semibold">System Architect and Full-Stack Engineer</span> specializing in backend infrastructure, RAG pipelines, and AI integration.
+                I&apos;m a <span className="text-foreground font-semibold">Computer Science graduate</span> from the University of Peradeniya, where I finished with First Class Honours and now work as a Temporary Demonstrator. My interests sit at the intersection of systems engineering and machine learning.
               </p>
               <p>
-                I spend my days turning fragile concepts into robust applications. Whether you need to fix a broken voice agent or scale a compute-heavy video pipeline, I ensure your ideas don&apos;t just stay code—they become real products.
+                Most of what I know came from building things that had to stay up: distributed backends, asynchronous AI pipelines, and the cloud infrastructure underneath them. Watching those systems behave badly under load is what raised the questions I now find worth researching—why parallelism stops paying off, how scheduling and memory behaviour quietly set the cost of running AI workloads.
               </p>
               <p>
-                My approach is simple: understand the problem deeply, design for scale from day one, and ship production-ready systems that founders can build businesses on.
+                I&apos;m currently looking toward PhD research in that space. Always glad to talk with people working on similar problems.
               </p>
             </div>
 

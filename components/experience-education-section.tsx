@@ -1,10 +1,10 @@
 "use client";
 
-import { Briefcase, GraduationCap } from "lucide-react";
+import { Award, Briefcase, GraduationCap } from "lucide-react";
 
 export function ExperienceEducationSection() {
   return (
-    <section className="py-16 px-4 bg-card" id="experience">
+    <section className="py-24 px-4 bg-background" id="experience">
       <div className="max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Experience Section */}
@@ -15,11 +15,11 @@ export function ExperienceEducationSection() {
             </h3>
             <ol className="relative border-l border-border space-y-12">
               <li className="ml-8">
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-card">
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-background">
                   <Briefcase className="w-3 h-3 text-primary-foreground" />
                 </span>
                 <h4 className="text-lg font-semibold text-foreground">
-                  Teaching Assistant
+                  Temporary Demonstrator
                 </h4>
                 <p className="text-base font-normal text-muted-foreground mb-1">
                   University of Peradeniya
@@ -29,7 +29,7 @@ export function ExperienceEducationSection() {
                 </time>
               </li>
               <li className="ml-8">
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-card">
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-background">
                   <Briefcase className="w-3 h-3 text-primary-foreground" />
                 </span>
                 <h4 className="text-lg font-semibold text-foreground">
@@ -43,7 +43,7 @@ export function ExperienceEducationSection() {
                 </time>
               </li>
               <li className="ml-8">
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-card">
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-background">
                   <Briefcase className="w-3 h-3 text-primary-foreground" />
                 </span>
                 <h4 className="text-lg font-semibold text-foreground">
@@ -67,7 +67,7 @@ export function ExperienceEducationSection() {
             </h3>
             <ol className="relative border-l border-border">
               <li className="ml-8">
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-card">
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-background">
                   <GraduationCap className="w-3 h-3 text-primary-foreground" />
                 </span>
                 <h4 className="text-lg font-semibold text-foreground">
@@ -79,6 +79,14 @@ export function ExperienceEducationSection() {
                 <time className="text-sm font-normal leading-none text-muted-foreground/80">
                   2022 - 2026
                 </time>
+
+                <div className="mt-5 flex items-start gap-2.5 text-sm text-muted-foreground">
+                  <Award className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>
+                    University Award for Academic Excellence, University of
+                    Peradeniya (2026)
+                  </span>
+                </div>
               </li>
             </ol>
           </div>

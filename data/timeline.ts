@@ -32,6 +32,52 @@ export type TimelineEntry = TimelineItemData | TestimonialData;
 export const timelineData: TimelineEntry[] = [
   // --- 2026 ---
   {
+    id: "isbm-2026-paper",
+    year: "Sep 2026",
+    title: "Presented at ISBM 2026, Bangkok",
+    subtitle: "Conference Paper",
+    icon: "bookOpen",
+    tags: ["AI"],
+    description:
+      "'Parallelism Isn't Free: Two Hidden Walls in a Heterogeneous Media-Understanding Pipeline' — two scaling walls found while profiling a production pipeline that mixes local CPU-bound models with external AI APIs. Proceedings to appear in Springer, Lecture Notes in Networks and Systems.",
+    technologies: [
+      "Parallel Processing",
+      "Concurrency",
+      "Scheduling",
+      "AI Pipelines",
+      "Performance Analysis",
+    ],
+    caseStudyTitle:
+      "Parallelism Isn't Free: Two Hidden Walls in a Heterogeneous Media-Understanding Pipeline",
+    caseStudyContent:
+      "This paper came directly out of production work on a heterogeneous media-understanding pipeline — one that runs local CPU-bound transcription models alongside external AI APIs for heavy video analysis. Scaling it revealed that adding workers stops buying throughput well before the hardware is saturated. The paper characterises two distinct walls behind that: one rooted in how contended CPU-bound stages interact with the scheduler, and one in how the pipeline's slowest heterogeneous stage bounds the whole graph. Both are measured against a real workload, and the paper closes with what this means for the cost of running AI infrastructure at scale. Presented at ISBM 2026 in Bangkok; proceedings to be published in Springer's Lecture Notes in Networks and Systems.",
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    id: "cjs-peft-paper",
+    year: "2026 (In Review)",
+    title: "Journal Paper Under Review — Ceylon Journal of Science",
+    subtitle: "Journal Article",
+    icon: "bookOpen",
+    tags: ["AI"],
+    description:
+      "'A two-stage output-space parameter-efficient transfer learning framework for low-resource medical imaging adaptation' — a PEFT framework that adapts pretrained vision models in the output space, for medical imaging domains where labelled data is scarce. Currently under peer review.",
+    technologies: [
+      "PEFT",
+      "Vision Transformers",
+      "Transfer Learning",
+      "Medical Imaging",
+      "PyTorch",
+    ],
+    caseStudyTitle:
+      "A Two-Stage Output-Space PEFT Framework for Low-Resource Medical Imaging",
+    caseStudyContent:
+      "This paper is the written-up result of my undergraduate research on transfer learning for medical imaging. Standard fine-tuning struggles when the target domain has only a few hundred labelled scans, and conventional parameter-efficient methods still reach into the backbone to adapt it. The framework proposed here works in two stages and confines adaptation to the output space instead, which keeps the pretrained representation intact while still fitting the new domain. It is evaluated against both full fine-tuning and standard PEFT baselines across several low-resource medical datasets. Submitted to the Ceylon Journal of Science and currently in peer review.",
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+  {
     id: "samaja-ai-2026",
     year: "2026 (In Progress)",
     title: "SamajaAI - EdTech Voice Agent",

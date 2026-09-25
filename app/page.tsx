@@ -1,27 +1,31 @@
 "use client"
 
-import { SaaSHeroSection } from "@/components/saas-hero-section"
-import { AgitationSection } from "@/components/agitation-section"
-import { ServicesSection } from "@/components/services-section"
-import { CaseStudiesSection } from "@/components/case-studies-section"
-import { EngagementModelSection } from "@/components/engagement-model-section"
-import { TestimonialsSection } from "@/components/saas-testimonials-section"
+import { useState } from "react"
+import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
+import { SkillsSection } from "@/components/skills-section"
+import { ExperienceEducationSection } from "@/components/experience-education-section"
+import { TimelineSection } from "@/components/timeline-section"
 import { BlogSection } from "@/components/blog-section"
-import { FinalCTASection } from "@/components/final-cta-section"
+import { ContactSection } from "@/components/contact-section"
+import { CaseStudyModal } from "@/components/case-study-modal"
 
 export default function Home() {
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState<string | null>(null)
+
   return (
-    <main className="min-h-screen bg-background">
-      <SaaSHeroSection />
-      <AgitationSection />
-      <ServicesSection />
-      <CaseStudiesSection />
-      <EngagementModelSection />
-      <TestimonialsSection />
+    <div className="min-h-screen bg-background">
+      <HeroSection />
       <AboutSection />
+      <SkillsSection />
+      <ExperienceEducationSection />
+      <TimelineSection onSelectCaseStudy={setSelectedCaseStudy} />
       <BlogSection />
-      <FinalCTASection />
-    </main>
+      <ContactSection />
+      <CaseStudyModal
+        caseStudyId={selectedCaseStudy}
+        onClose={() => setSelectedCaseStudy(null)}
+      />
+    </div>
   )
 }

@@ -93,19 +93,9 @@ export function Footer() {
             </a>
           </div>
 
-          {/* --- Powered By --- */}
+          {/* --- Copyright --- */}
           <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Lakshitha. All rights reserved.
-            <span className="mx-2">|</span>
-            Powered by{" "}
-            <a
-              href="https://xanvia.tech"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-primary hover:underline"
-            >
-              Xanvia
-            </a>
+            © {new Date().getFullYear()} Lakshitha Eranga. All rights reserved.
           </div>
         </div>
       </div>
