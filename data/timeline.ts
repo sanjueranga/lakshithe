@@ -79,13 +79,13 @@ export const timelineData: TimelineEntry[] = [
   },
   {
     id: "samaja-ai-2026",
-    year: "2026 (In Progress)",
+    year: "2026",
     title: "SamajaAI - EdTech Voice Agent",
     subtitle: "Lead Developer & Architect",
     icon: "code",
     tags: ["AI", "Web"],
     description:
-      "Partnering with a visionary founder to transform an existing prototype into a scalable, production-ready MVP. Leading architectural decisions for a secure EdTech platform specializing in AI voice agents via ElevenLabs integration.",
+      "Transformed an existing prototype into a scalable, production-ready MVP. Led the architectural decisions behind a secure EdTech platform built around AI voice agents, with ElevenLabs integration.",
     technologies: [
       "AI Voice Agents",
       "ElevenLabs",
@@ -96,19 +96,19 @@ export const timelineData: TimelineEntry[] = [
     ],
     caseStudyTitle: "Architecting a Production-Ready EdTech Voice Agent",
     caseStudyContent:
-      "Collaborating closely with the founder of SamajaAI to transition their working prototype into a robust, production-ready MVP. My responsibilities include making critical architectural design choices to ensure long-term scalability and security. The core of the platform features a specialized AI voice agent tailored for the EdTech sector, heavily leveraging ElevenLabs integration for hyper-realistic and engaging learning interactions.",
+      "Worked closely with the founder of SamajaAI to transition their working prototype into a robust, production-ready MVP. I made the critical architectural design choices that gave the platform long-term scalability and security. At its core sits a specialized AI voice agent tailored for the EdTech sector, leaning heavily on ElevenLabs integration for realistic, engaging learning interactions.",
     githubUrl: "#",
     liveUrl: "#",
   },
   {
     id: "mixtape-saas-2026",
-    year: "2025 (In Progress)",
-    title: "AI powered Marketing Video Storytelling Generation ",
+    year: "2025 - 2026",
+    title: "AI powered Marketing Video Storytelling Generation",
     subtitle: "Mixtape AI SaaS (Contract)",
     icon: "code",
     tags: ["AI", "Web"],
     description:
-      "Architecting a production-grade SaaS backend: event-driven services, AI pipeline orchestration, secure file storage, and DevOps (CI/CD, containerization, observability). Responsible for API design, job queues, background workers, and scalable infra to support AI video generation and data workflows.",
+      "Architected and shipped a production-grade SaaS backend: event-driven services, AI pipeline orchestration, secure file storage, and DevOps (CI/CD, containerization, observability). Owned API design, job queues, background workers, and the autoscaling infrastructure behind AI video generation — a 10x improvement in task execution time.",
     technologies: [
       "AI",
       "Video Generation",
@@ -119,7 +119,7 @@ export const timelineData: TimelineEntry[] = [
     ],
     caseStudyTitle: "AI Backend for SaaS",
     caseStudyContent:
-      "Architecting and building the core AI backend for a new SaaS platform. This role involves integrating video generation models, managing asynchronous tasks, and ensuring scalable, cost-efficient file storage with AWS S3.",
+      "Architected and built the core AI backend for a marketing-video SaaS platform, taking it from contract start through to production. The work covered integrating video generation models, orchestrating a hybrid pipeline that paired local CPU-bound transcription with external AI APIs for heavy analysis, running the asynchronous workload on Celery and message brokers so the main API stayed responsive, and managing scalable, cost-efficient storage on AWS S3. Infrastructure was provisioned with Terraform and deployed through CI/CD pipelines built for zero-downtime releases. The autoscaling redesign delivered a 10x improvement in task execution time.",
     githubUrl: "#",
     liveUrl: "#",
   },
