@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, FileText } from "lucide-react";
 import Image from "next/image";
 
 const UpworkIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -71,6 +71,21 @@ export function HeroSection() {
               onClick={() => scrollTo("contact")}
             >
               Get in Touch
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary/10 px-8 bg-transparent"
+            >
+              <a
+                href="/Lakshitha_Eranga_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText className="size-5" />
+                View CV
+              </a>
             </Button>
           </div>
 

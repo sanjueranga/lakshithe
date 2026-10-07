@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { Moon, Sun, Menu } from "lucide-react";
+import { Moon, Sun, Menu, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -68,6 +68,18 @@ export function Header() {
                 </button>
               ))}
             </nav>
+
+            {/* --- CV Button --- */}
+            <Button asChild size="sm" className="shadow-md shadow-primary/30">
+              <a
+                href="/Lakshitha_Eranga_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText className="h-4 w-4" />
+                CV
+              </a>
+            </Button>
 
             {/* --- Theme Toggle Button --- */}
             <Button
