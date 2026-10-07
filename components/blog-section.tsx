@@ -9,31 +9,30 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/fade-in";
 const blogPosts = [
   {
     id: "blog-1",
-    title:
-      "Writing My Own Django Serializer for camelCase — Until I Found the One-Line Fix",
+    title: "No Budget, No Problem: How I Built a DIY Video Streaming Server",
     description:
-      "When you’re building a Django REST API and the frontend is speaking fluent camelCase while Django insists on snake_case… you end up playing translator.",
-    imageUrl: "/blog-1.png", // Save your image here
+      "When you’re building a SaaS product, you need to think like an engineer and spend like a student. YouTube, Vimeo and Mux didn’t fit our LMS or our budget, so we rolled our own.",
+    imageUrl: "/cloud-bill.webp",
     postUrl:
-      "https://medium.com/level-up-python/writing-my-own-django-serializer-for-camelcase-until-i-found-the-one-line-fix-92cc9e7336b3",
+      "https://medium.com/cloud-core-x/no-budget-no-problem-how-i-built-a-diy-video-streaming-server-94c7a3f778b2",
   },
   {
     id: "blog-2",
-    title: "AI Agents Are Only as Smart as Their Data",
+    title: "From a 10-Minute AI Job to a 60-Second Pipeline",
     description:
-      "A practical guide to turning noisy web data into structured signals your AI agents can actually use. We just built an agent. Its mission? To scout the internet for trending topics...",
-    imageUrl: "/blog-2.png", // Save your image here
+      "What happens when 50 users upload 5 videos at once? How I evolved a compute-heavy AI system from a demo-ready MVP into a production-grade pipeline without rewriting the core business logic.",
+    imageUrl: "/article_ai_pipeline.webp",
     postUrl:
-      "https://medium.com/pythoneers/ai-agents-are-only-as-smart-as-their-data-68a43bdeccd3",
+      "https://levelup.gitconnected.com/from-a-10-minute-ai-job-to-a-60-second-pipeline-612f93e61d9d?sk=4607ed7083a28da7f186cfc9174ec623",
   },
   {
     id: "blog-3",
-    title: "Don’t Waste Money on AI Subscriptions Until You Read This",
+    title: "Threads in C — Explained Simply with Code",
     description:
-      "Real-world testing reveals which AI tools are worth your money. As a research student, writer, and programmer, I’m living in the most AI-powered era yet.",
-    imageUrl: "/blog-3.png",
+      "Threads and multiprocessing come from the world of distributed computing. Using C, a language close to the hardware, we see how threads, processes, and memory come together.",
+    imageUrl: "/article-c.webp",
     postUrl:
-      "https://medium.com/everyday-ai/dont-waste-money-on-ai-subscriptions-until-you-read-this-b01a9b974375",
+      "https://lakshithe.medium.com/threads-in-c-explained-simply-with-code-bae3f45e391b?sk=4222c13af00cb62e023d5cd452142faf",
   },
 ];
 
