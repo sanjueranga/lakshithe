@@ -9,9 +9,9 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/fade-in";
 const blogPosts = [
   {
     id: "blog-1",
-    title: "No Budget, No Problem: How I Built a DIY Video Streaming Server",
+    title: "Cut Your Cloud Bills: How to Build Your Own Cloud Video Server",
     description:
-      "When you’re building a SaaS product, you need to think like an engineer and spend like a student. YouTube, Vimeo and Mux didn’t fit our LMS or our budget, so we rolled our own.",
+      "Mux and Vimeo bills add up fast. How we built our own HLS video streaming server for an LMS: adaptive streaming, protection against easy downloads, and full control over how videos are served.",
     imageUrl: "/cloud-bill.webp",
     postUrl:
       "https://medium.com/cloud-core-x/no-budget-no-problem-how-i-built-a-diy-video-streaming-server-94c7a3f778b2",
