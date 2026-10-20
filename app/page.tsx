@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { HeroSection } from "@/components/hero-section"
-import { AboutSection } from "@/components/about-section"
 import { SkillsSection } from "@/components/skills-section"
 import { ExperienceEducationSection } from "@/components/experience-education-section"
 import { TimelineSection } from "@/components/timeline-section"
@@ -16,7 +15,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
-      <AboutSection />
       <SkillsSection />
       <ExperienceEducationSection />
       <TimelineSection onSelectCaseStudy={setSelectedCaseStudy} />

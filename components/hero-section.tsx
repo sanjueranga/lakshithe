@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, FileText } from "lucide-react";
 import Image from "next/image";
+import { FadeIn } from "@/components/fade-in";
 
 const UpworkIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -35,7 +36,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-32 bg-[radial-gradient(ellipse_at_top_right,var(--muted)_0%,var(--background)_70%)]">
+    <section id="about" className="min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-32 bg-[radial-gradient(ellipse_at_top_right,var(--muted)_0%,var(--background)_70%)]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         {/* Left Column (Text Content) */}
         <div className="text-left row-start-2 lg:row-start-auto">
@@ -48,12 +49,30 @@ export function HeroSection() {
             <span className="block text-primary">&amp; Architect</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            Computer Science graduate working at the intersection of systems
-            engineering and artificial intelligence. I study how concurrency,
-            scheduling, and memory behaviour shape the performance and cost of AI
-            infrastructure — and I build the systems that run it.
-          </p>
+          <div className="space-y-4 text-lg text-muted-foreground mb-10 max-w-2xl leading-relaxed">
+            <p>
+              I&apos;m a{" "}
+              <span className="text-foreground font-semibold">
+                Computer Science graduate
+              </span>{" "}
+              from the University of Peradeniya, where I finished with First
+              Class Honours and now work as a Temporary Demonstrator. My
+              interests sit at the intersection of systems engineering and
+              machine learning.
+            </p>
+            <p>
+              Most of what I know came from building things that had to stay up:
+              distributed backends, asynchronous AI pipelines, and the cloud
+              infrastructure underneath them. Watching those systems behave
+              badly under load is what raised the questions I now find worth
+              researching—why parallelism stops paying off, how scheduling and
+              memory behaviour quietly set the cost of running AI workloads.
+            </p>
+            <p>
+              I&apos;m currently looking toward PhD research in that space.
+              Always glad to talk with people working on similar problems.
+            </p>
+          </div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -122,34 +141,30 @@ export function HeroSection() {
         </div>
 
         {/* Right Column (Portrait) */}
-        <div className="relative w-full row-start-1 lg:row-start-auto flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-md lg:max-w-lg">
-            {/* Background glow effect */}
+        <FadeIn
+          direction="right"
+          className="relative w-full row-start-1 lg:row-start-auto flex justify-center lg:justify-end"
+        >
+          <div className="relative w-full max-w-sm">
             <div
-              className="absolute -inset-8 bg-gradient-to-r from-primary to-emerald-600 blur-3xl opacity-20 dark:opacity-10"
+              className="absolute -inset-2.5 bg-gradient-to-r from-primary to-emerald-600 blur-lg opacity-30 dark:opacity-20 animate-pulse-slow"
               style={imageShapeStyle}
             />
-
             <Image
-              src="/lakshitha-hero.png"
-              alt="Portrait"
-              width={700}
-              height={700}
+              src="/lakshitha.png"
+              alt="Lakshitha Eranga"
+              width={400}
+              height={400}
               priority
-              className="relative w-full object-cover shadow-2xl grayscale opacity-20 dark:opacity-15"
-              style={{
-                ...imageShapeStyle,
-                filter: "contrast(1.3) brightness(0.9)",
-              }}
+              className="relative w-full object-cover shadow-2xl aspect-square"
+              style={imageShapeStyle}
             />
-
-            {/* Overlay for depth */}
             <div
-              className="absolute inset-0 bg-black/5 dark:bg-black/10 transition-colors duration-300"
+              className="absolute inset-0 bg-black/4 dark:bg-black/20 transition-colors duration-300"
               style={imageShapeStyle}
             />
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );
