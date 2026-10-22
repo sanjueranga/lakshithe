@@ -314,15 +314,15 @@ function Teaching() {
         </Item>
       )}
       {courses.length > 0 && (
-        <ul className="mt-4 space-y-3">
+        <ul className="ml-4 mt-3 space-y-3 border-l border-border pl-4">
           {courses.map((c) => (
-            <Item key={c.name}>
+            <li key={c.name}>
               <p className="font-mono text-[11px] text-muted-foreground">
                 {[c.code, c.level, c.years].filter(Boolean).join(" · ")}
               </p>
-              <h4 className="font-semibold">{c.name}</h4>
-              <p className="mt-1 text-sm leading-relaxed">{c.what}</p>
-            </Item>
+              <h5 className="text-sm font-semibold">{c.name}</h5>
+              <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">{c.what}</p>
+            </li>
           ))}
         </ul>
       )}

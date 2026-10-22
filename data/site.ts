@@ -107,6 +107,7 @@ export interface Leadership {
   what?: string;
   numbers?: string;
   url?: string;
+  category?: "society" | "research" | "teaching" | "startup";
 }
 
 export interface Testimonial {
@@ -131,7 +132,7 @@ export const profile: Profile = {
   name: "Lakshitha Eranga",
   title: "Systems Researcher & Architect",
   intro:
-    "Computer Science graduate (First Class Honours, University of Peradeniya), now a Temporary Demonstrator there. I research why parallelism stops paying off and how scheduling and memory behaviour set the cost of running AI workloads. Before research, I built distributed backends and AI pipelines that had to stay up under load.",
+    "A boy from the Knuckles Mountain Range who grew up curious, reached for the sky and dreamt big. Today I'm a Computer Science graduate (First Class Honours, University of Peradeniya) and a Temporary Demonstrator there, researching why parallelism stops paying off and how scheduling and memory behaviour set the cost of running AI workloads.",
   statusLine: "Looking toward PhD research in systems / AI infrastructure",
   photo: "/lakshitha-portrait.png",
   cv: "/Lakshitha_Eranga_CV.pdf",
@@ -146,6 +147,8 @@ export const profile: Profile = {
     "Python",
     "AWS",
     "Terraform",
+    "Docker",
+    "Kubernetes",
   ],
   links: [
     { label: "GitHub", url: "https://github.com/sanjueranga", icon: "github", show: true },
@@ -180,7 +183,7 @@ export const publications: Publication[] = [
     year: 2026,
     status: "accepted",
     summary:
-      "Two scaling walls found while profiling a production pipeline that mixes local CPU-bound models with external AI APIs. Presented at ISBM 2026; proceedings to appear in Springer LNNS.",
+      "Two scaling walls found while profiling a production pipeline that mixes local CPU-bound models with external AI APIs. Virtually presented at ISBM 2026; proceedings to appear in Springer LNNS.",
     details:
       "This paper came directly out of production work on a heterogeneous media-understanding pipeline — one that runs local CPU-bound transcription models alongside external AI APIs for heavy video analysis. Scaling it revealed that adding workers stops buying throughput well before the hardware is saturated. The paper characterises two distinct walls behind that: one rooted in how contended CPU-bound stages interact with the scheduler, and one in how the pipeline's slowest heterogeneous stage bounds the whole graph. Both are measured against a real workload, and the paper closes with what this means for the cost of running AI infrastructure at scale.",
     stack: [
@@ -485,7 +488,14 @@ export const projects: Project[] = [
 
 // Course details are not filled in yet; the panel falls back to the
 // demonstrator role from `roles`.
-export const courses: Course[] = [];
+export const courses: Course[] = [
+  {
+    code: "CSC 3081",
+    name: "Computer Graphics Programming",
+    level: "Undergraduate",
+    what: "Practical lab sessions in C++ and OpenGL.",
+  },
+];
 
 /* -------------------------------- Writing --------------------------------- */
 
@@ -537,12 +547,6 @@ export const awards: Award[] = [
     year: "2026",
     note: "Recognized for exceptional client satisfaction, timely delivery, and high-quality work across multiple projects.",
   },
-  {
-    name: "Upwork Rising Talent",
-    issuer: "Upwork",
-    year: "2025",
-    note: "Recognized for strong early success, positive client feedback, and high-quality project delivery.",
-  },
 ];
 
 export const certificates: Certificate[] = [
@@ -577,9 +581,9 @@ export const journey: Milestone[] = [
   { year: "2020", text: "Started self-teaching Python, web development and Linux." },
   { year: "2022", text: "Began the BSc in Computer Science; built the CSUP member portal, my first full-stack project." },
   { year: "2024", text: "Co-founded Xanvia and led the OpenEd LMS as a third-year project." },
-  { year: "2025", text: "Earned Upwork Rising Talent and organised REIGNITE ’25." },
+  { year: "2025", text: "Organised REIGNITE ’25 and earned a place at the ICE 2025 Entrepreneurial Boot Camp." },
   { year: "2026", text: "Graduated with First Class Honours and became Upwork Top Rated." },
-  { year: "2026", text: "Presented at ISBM 2026, Bangkok." },
+  { year: "2026", text: "Virtually presented at ISBM 2026 (Bangkok)." },
 ];
 
 /* ------------------------------- Leadership ------------------------------- */
@@ -587,29 +591,61 @@ export const journey: Milestone[] = [
 export const leadership: Leadership[] = [
   {
     role: "President",
-    org: "Computer Science Society, University of Peradeniya (CSUP)",
-    what: "Led the society, organising major events and coordinating technical initiatives.",
+    org: "Computer Science Society (CSUP), UoP",
+    dates: "2024–2025",
+    what: "Led the society: events, member collaboration, technical initiatives.",
+    category: "society",
   },
   {
     role: "Organiser",
-    org: "CSUP — REIGNITE ’25 Game Night",
+    org: "REIGNITE ’25 Game Night",
     dates: "2025",
-    what: "Revived the society's annual gaming night after a seven-year break, including an esports tournament. Led a team of coordinators, secured sponsorships and managed logistics.",
-    numbers: "~150 participants, 18 teams",
+    what: "Revived the annual gaming night after seven years, with an esports tournament, sponsorships and logistics.",
+    numbers: "~150 participants · 18 teams",
+    category: "society",
   },
   {
     role: "Coordinator",
-    org: "CSUP — “Code 2 Cloud” DevOps Workshop",
+    org: "“Code 2 Cloud” DevOps Workshop",
     dates: "2023",
-    what: "Helped organise a complete DevOps workshop covering AWS (S3, EC2, EKS), Kubernetes, CI/CD with Jenkins, monitoring and security.",
+    what: "AWS, Kubernetes, CI/CD with Jenkins, monitoring and security.",
+    category: "society",
+  },
+  {
+    role: "Organising Committee",
+    org: "RESCON, Postgraduate Institute of Science, UoP",
+    dates: "2026",
+    what: "Event logistics and academic presentations.",
+    category: "research",
+  },
+  {
+    role: "Organising Committee",
+    org: "SURS, Undergraduate Research Symposium, UoP",
+    dates: "2024",
+    what: "Event logistics and academic presentations.",
+    category: "research",
+  },
+  {
+    role: "Volunteer Teacher & Speaker",
+    org: "SIRED, Society of Industrial Relations and Entrepreneurship Development",
+    what: "Taught O/L students and ran seminars.",
+    category: "teaching",
   },
   {
     role: "Co-Founder",
     org: "Xanvia",
     dates: "2024",
-    what: "Co-founded a startup building AI-powered web tools, automation and SaaS products for founders and businesses. Responsible for solution architecture, backend development, CI/CD pipelines and leading collaborative development.",
+    what: "AI-powered web tools and SaaS for founders. I own architecture, backend and CI/CD.",
     url: "https://xanvia.tech",
+    category: "startup",
   },
+];
+
+export const leadershipGroups: { title: string; category: NonNullable<Leadership["category"]> }[] = [
+  { title: "Student society", category: "society" },
+  { title: "Research community", category: "research" },
+  { title: "Teaching & mentoring", category: "teaching" },
+  { title: "Startup", category: "startup" },
 ];
 
 /* --------------------------------- Clients -------------------------------- */
@@ -617,7 +653,7 @@ export const leadership: Leadership[] = [
 export const clients = {
   summary:
     "Backend architecture, AI pipelines and cloud infrastructure for startups.",
-  badges: ["Top Rated (2026)", "Rising Talent (2025)"],
+  badges: ["Top Rated (2026)"],
   upwork: "https://www.upwork.com/freelancers/~013fa9079ef42bd1b1",
 };
 
@@ -656,7 +692,11 @@ export const testimonials: Testimonial[] = [
 export interface Interest {
   name: string;
   art: "f1" | "space" | "motorcycle" | "mountains" | "beach";
+  note?: string;
 }
+
+export const outsideStory =
+  "I'm a boy from the Knuckles Mountain Range, who grew up curious, always trying to reach the skies and dreaming big. The mountains taught me to keep climbing; the rest of my time goes to engines, space, and the sea.";
 
 export const interests: Interest[] = [
   { name: "Formula 1", art: "f1" },
