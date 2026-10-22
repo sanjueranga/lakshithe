@@ -417,20 +417,41 @@ function Education() {
           ))}
         </ul>
       </section>
-
-      <section className="mt-8">
-        <SectionTitle>Journey</SectionTitle>
-        <ol className="space-y-2 border-l border-border pl-5">
-          {journey.map((m) => (
-            <li key={m.year + m.text} className="panel-item relative flex gap-4 text-sm">
-              <span aria-hidden className="absolute -left-[25px] top-2 size-1.5 rounded-full bg-muted-foreground/60" />
-              <span className="w-10 shrink-0 font-mono text-[11px] text-muted-foreground">{m.year}</span>
-              <span>{m.text}</span>
-            </li>
-          ))}
-        </ol>
-      </section>
     </>
+  );
+}
+
+function Journey() {
+  return (
+    <ol className="relative space-y-4 border-l border-border pl-6">
+      {journey.map((milestone, index) => (
+        <li key={milestone.year + milestone.text} className="relative">
+          <span
+            aria-hidden
+            className={`absolute -left-[30px] top-5 size-2.5 rounded-full border-2 border-background ${
+              index === 0 ? "bg-primary ring-4 ring-primary/15" : "bg-muted-foreground/60"
+            }`}
+          />
+          <article
+            className={`rounded-lg border p-4 transition-colors ${
+              index === 0
+                ? "border-primary/30 bg-primary/5"
+                : "border-border bg-card/60 hover:border-primary/25"
+            }`}
+          >
+            <p className="mb-2 font-mono text-[11px] font-semibold tracking-[0.16em] text-primary">
+              {milestone.year}
+            </p>
+            <p className="text-sm leading-relaxed">{milestone.text}</p>
+            {milestone.url && (
+              <p className="mt-3">
+                <ExtLink href={milestone.url}>Event details</ExtLink>
+              </p>
+            )}
+          </article>
+        </li>
+      ))}
+    </ol>
   );
 }
 
@@ -511,6 +532,7 @@ function Clients() {
 
 export const panelBodies: Record<string, () => ReactNode> = {
   research: Research,
+  journey: Journey,
   experience: Experience,
   projects: Projects,
   teaching: Teaching,
@@ -522,6 +544,7 @@ export const panelBodies: Record<string, () => ReactNode> = {
 
 export const panelTitles: Record<string, string> = {
   research: "Research",
+  journey: "Journey",
   experience: "Experience",
   projects: "Projects",
   teaching: "Teaching",

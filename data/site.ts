@@ -98,6 +98,7 @@ export interface Certificate {
 export interface Milestone {
   year: string;
   text: string;
+  url?: string;
 }
 
 export interface Leadership {
@@ -541,12 +542,6 @@ export const degree = {
 
 export const awards: Award[] = [
   { name: "University Award for Academic Excellence", issuer: "University of Peradeniya", year: "2026" },
-  {
-    name: "Upwork Top Rated",
-    issuer: "Upwork",
-    year: "2026",
-    note: "Recognized for exceptional client satisfaction, timely delivery, and high-quality work across multiple projects.",
-  },
 ];
 
 export const certificates: Certificate[] = [
@@ -568,22 +563,23 @@ export const certificates: Certificate[] = [
     year: "2023",
     note: "Security principles, network security, threat management.",
   },
-  {
-    name: "ICE 2025 Entrepreneurial Boot Camp",
-    issuer: "led by NUS Prof. Suranga Nanayakkara",
-    year: "2025",
-    note: "Intensive 3-day boot camp on creativity, design thinking and entrepreneurship. Selected from the best students of Sri Lankan universities, 6% acceptance rate.",
-  },
 ];
 
 export const journey: Milestone[] = [
-  { year: "2015", text: "Wrote my first “Hello World”, in Pascal at Nugawela Central College." },
-  { year: "2020", text: "Started self-teaching Python, web development and Linux." },
-  { year: "2022", text: "Began the BSc in Computer Science; built the CSUP member portal, my first full-stack project." },
-  { year: "2024", text: "Co-founded Xanvia and led the OpenEd LMS as a third-year project." },
-  { year: "2025", text: "Organised REIGNITE ’25 and earned a place at the ICE 2025 Entrepreneurial Boot Camp." },
-  { year: "2026", text: "Graduated with First Class Honours and became Upwork Top Rated." },
-  { year: "2026", text: "Virtually presented at ISBM 2026 (Bangkok)." },
+  { year: "2026", text: "Research paper accepted at ISBM 2026; virtually presented in Bangkok." },
+  { year: "2026", text: "Graduated with First Class Honours in Computer Science." },
+  { year: "2026", text: "Received the University Award for Academic Excellence." },
+  { year: "2026", text: "Earned Upwork Top Rated status." },
+  {
+    year: "2025",
+    text: "Organised REIGNITE ’25, reviving CSUP’s annual game night after seven years.",
+    url: "http://csup.soc.pdn.ac.lk/events/reignite-25",
+  },
+  { year: "2025", text: "Selected for the ICE Entrepreneurial Boot Camp, a 3-day programme with a 6% acceptance rate." },
+  { year: "2024", text: "Co-founded Xanvia and led development of the OpenEd LMS." },
+  { year: "2022", text: "Started a BSc in Computer Science and built the CSUP member portal, my first full-stack project." },
+  { year: "2020", text: "Started teaching myself Python, web development and Linux." },
+  { year: "2015", text: "Wrote my first “Hello World” in Pascal at Nugawela Central College." },
 ];
 
 /* ------------------------------- Leadership ------------------------------- */
@@ -728,6 +724,13 @@ export function buildUnits(): Unit[] {
       count: plural(publications.length, "paper"),
       badge: inReview ? `${inReview} in review` : undefined,
       preview: "Parallelism, scheduling and the cost of AI infrastructure",
+    },
+    {
+      id: "journey",
+      label: "JOURNEY",
+      status: "active",
+      count: plural(journey.length, "milestone"),
+      preview: "ISBM 2026 paper accepted · First Class Honours",
     },
     {
       id: "experience",

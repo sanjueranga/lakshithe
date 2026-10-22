@@ -10,6 +10,7 @@ import { panelBodies, panelTitles } from "./panels";
 // Each unit gets a different faceplate so the cabinet reads like real hardware.
 const faceplate: Record<string, "bays" | "ports" | "vents"> = {
   research: "bays",
+  journey: "ports",
   experience: "ports",
   projects: "bays",
   teaching: "vents",
@@ -22,6 +23,7 @@ const faceplate: Record<string, "bays" | "ports" | "vents"> = {
 
 const shortLabel: Record<string, string> = {
   research: "Research",
+  journey: "Journey",
   experience: "Experience",
   projects: "Projects",
   teaching: "Teaching",

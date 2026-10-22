@@ -9,6 +9,7 @@ import {
   FlaskConical,
   GraduationCap,
   Handshake,
+  History,
   PenLine,
   Presentation,
   Users,
@@ -22,6 +23,7 @@ import { CvButton, Readme } from "./readme";
 
 const glyphs: Record<string, LucideIcon> = {
   research: FlaskConical,
+  journey: History,
   experience: Briefcase,
   projects: Boxes,
   teaching: Presentation,
@@ -33,6 +35,7 @@ const glyphs: Record<string, LucideIcon> = {
 
 const iconLabel: Record<string, string> = {
   research: "Research",
+  journey: "Journey",
   experience: "Experience",
   projects: "Projects",
   teaching: "Teaching",
