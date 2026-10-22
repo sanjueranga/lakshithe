@@ -575,7 +575,10 @@ export const journey: Milestone[] = [
     text: "Organised REIGNITE ’25, reviving CSUP’s annual game night after seven years.",
     url: "http://csup.soc.pdn.ac.lk/events/reignite-25",
   },
-  { year: "2025", text: "Selected for the ICE Entrepreneurial Boot Camp, a 3-day programme with a 6% acceptance rate." },
+  {
+    year: "2025",
+    text: "Selected for the ICE Entrepreneurial Boot Camp, led by Prof. Suranga Nanayakkara; a 3-day programme with a 6% acceptance rate.",
+  },
   { year: "2024", text: "Co-founded Xanvia and led development of the OpenEd LMS." },
   { year: "2022", text: "Started a BSc in Computer Science and built the CSUP member portal, my first full-stack project." },
   { year: "2020", text: "Started teaching myself Python, web development and Linux." },
@@ -733,11 +736,25 @@ export function buildUnits(): Unit[] {
       preview: "ISBM 2026 paper accepted · First Class Honours",
     },
     {
+      id: "education",
+      label: "EDUCATION & AWARDS",
+      status: "archive",
+      count: `degree + ${plural(awards.length, "award")}`,
+      preview: "BSc (Hons) Computer Science · First Class",
+    },
+    {
       id: "experience",
       label: "EXPERIENCE",
       status: "active",
       count: plural(roles.length, "role"),
       preview: `${roles[0].title} · University of Peradeniya`,
+    },
+    {
+      id: "teaching",
+      label: "TEACHING",
+      status: "active",
+      count: courses.length ? plural(courses.length, "course") : "Demonstrator",
+      preview: "Dept. of Statistics and Computer Science, UoP",
     },
     {
       id: "projects",
@@ -748,27 +765,6 @@ export function buildUnits(): Unit[] {
         .slice(0, 3)
         .map((p) => p.name.split(" — ")[0])
         .join(" · "),
-    },
-    {
-      id: "teaching",
-      label: "TEACHING",
-      status: "active",
-      count: courses.length ? plural(courses.length, "course") : "Demonstrator",
-      preview: "Dept. of Statistics and Computer Science, UoP",
-    },
-    {
-      id: "writing",
-      label: "WRITING",
-      status: "active",
-      count: plural(articles.length, "article"),
-      preview: articles[0].title.split(":")[0],
-    },
-    {
-      id: "education",
-      label: "EDUCATION & AWARDS",
-      status: "archive",
-      count: `degree + ${plural(awards.length, "award")}`,
-      preview: "BSc (Hons) Computer Science · First Class",
     },
     {
       id: "leadership",
@@ -783,6 +779,13 @@ export function buildUnits(): Unit[] {
       status: "active",
       count: `${plural(testimonials.length, "review")} · Top Rated`,
       preview: avg ? `Upwork · ${avg.toFixed(1)} average rating` : "Upwork",
+    },
+    {
+      id: "writing",
+      label: "WRITING",
+      status: "active",
+      count: plural(articles.length, "article"),
+      preview: articles[0].title.split(":")[0],
     },
     {
       id: "outside",
