@@ -602,6 +602,7 @@ export const leadership: Leadership[] = [
     dates: "2025",
     what: "Revived the annual gaming night after seven years, with an esports tournament, sponsorships and logistics.",
     numbers: "~150 participants · 18 teams",
+    url: "http://csup.soc.pdn.ac.lk/events/reignite-25",
     category: "society",
   },
   {
