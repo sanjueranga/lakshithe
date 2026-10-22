@@ -1,0 +1,432 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Paper desk by day, ink desk by night. One accent: emerald. */
+:root {
+  --wall: #ebe6db;
+  --grid: rgba(48, 72, 62, 0.07);
+  --grid-major: rgba(48, 72, 62, 0.11);
+
+  --background: #fffdf9;
+  --foreground: #1b2220;
+  --card: #f7f4ee;
+  --card-foreground: #1b2220;
+  --popover: #fffdf9;
+  --popover-foreground: #1b2220;
+  --primary: #1b2220;
+  --primary-foreground: #fffdf9;
+  --secondary: #efebe3;
+  --secondary-foreground: #1b2220;
+  --muted: #efebe3;
+  --muted-foreground: #6a716d;
+  --accent: rgb(50, 210, 151);
+  --accent-foreground: #0d1512;
+  --accent-ink: oklch(0.5 0.11 163);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: rgba(27, 34, 32, 0.11);
+  --input: rgba(27, 34, 32, 0.14);
+  --ring: rgb(50, 210, 151);
+  --radius: 0.625rem;
+  --led-amber: #e09a00;
+
+  --folder: #93d2b8;
+  --folder-back: #6fb99b;
+  --folder-ink: #276650;
+  --paper: #ffffff;
+  --paper-fold: #ece8e0;
+  --paper-edge: #cfc9bd;
+  --sticky: #fde68a;
+  --sticky-ink: #3b3212;
+  --window-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 0 0 1px rgba(27, 34, 32, 0.08),
+    0 30px 60px -24px rgba(30, 45, 38, 0.35), 0 12px 24px -16px rgba(30, 45, 38, 0.2);
+}
+
+.dark {
+  --wall: #0b1110;
+  --grid: rgba(170, 220, 195, 0.04);
+  --grid-major: rgba(170, 220, 195, 0.07);
+
+  --background: #131b19;
+  --foreground: #e3eae7;
+  --card: #18221f;
+  --card-foreground: #e3eae7;
+  --popover: #131b19;
+  --popover-foreground: #e3eae7;
+  --primary: #e3eae7;
+  --primary-foreground: #0b1110;
+  --secondary: #1e2926;
+  --secondary-foreground: #e3eae7;
+  --muted: #1e2926;
+  --muted-foreground: #8b9994;
+  --accent: rgb(50, 210, 151);
+  --accent-foreground: #0b1110;
+  --accent-ink: rgb(70, 214, 160);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: rgba(200, 230, 215, 0.1);
+  --input: rgba(200, 230, 215, 0.14);
+  --ring: rgb(50, 210, 151);
+  --led-amber: #f5b301;
+
+  --folder: #3b8a70;
+  --folder-back: #2b6a56;
+  --folder-ink: #c5f0de;
+  --paper: #dfe6e2;
+  --paper-fold: #b9c4bf;
+  --paper-edge: #8d9a95;
+  --sticky: #e3cd72;
+  --sticky-ink: #2a2410;
+  --window-shadow: 0 0 0 1px rgba(200, 230, 215, 0.1), 0 30px 70px -20px rgba(0, 0, 0, 0.7);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-mono: var(--font-jb), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-serif: var(--font-display), Georgia, serif;
+  --font-hand: var(--font-caveat), "Bradley Hand", cursive;
+  --color-accent-ink: var(--accent-ink);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    background: var(--wall);
+    @apply text-foreground;
+  }
+}
+
+/* --------------------------------------------------------------- Desktop --- */
+
+.desk {
+  background-color: var(--wall);
+  background-image:
+    linear-gradient(var(--grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  background-position: -1px -1px;
+}
+
+.menubar {
+  background: color-mix(in oklab, var(--background) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Icons: a 4-up home screen on phones, a 2-column strip on the desk. */
+.icons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem 0.5rem;
+  align-content: start;
+}
+@media (min-width: 640px) { .icons { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (min-width: 1024px) {
+  .icons {
+    grid-template-columns: repeat(2, 5.75rem);
+    gap: 0.75rem 0.25rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding: 0.25rem 0;
+  }
+}
+
+.desk-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+  padding: 0.35rem 0.25rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.desk-icon-img {
+  position: relative;
+  width: 3.75rem;
+  height: 3.25rem;
+  transition: transform 0.18s ease-out;
+}
+.desk-icon:hover .desk-icon-img { transform: translateY(-2px) scale(1.04); }
+.desk-icon:active .desk-icon-img { transform: scale(0.96); }
+.desk-icon-label {
+  max-width: 100%;
+  padding: 0.05rem 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.desk-icon[aria-current="page"] .desk-icon-img {
+  background: color-mix(in oklab, var(--foreground) 9%, transparent);
+  border-radius: 0.5rem;
+  outline: 4px solid color-mix(in oklab, var(--foreground) 9%, transparent);
+}
+.desk-icon[aria-current="page"] .desk-icon-label { background: var(--accent-ink); color: var(--background); }
+@media (max-width: 1023px) {
+  .icons[data-auto="true"] .desk-icon[aria-current] .desk-icon-img { background: none; outline: 0; }
+  .icons[data-auto="true"] .desk-icon[aria-current] .desk-icon-label { background: none; color: inherit; }
+}
+.desk-icon:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.desk-badge {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: var(--led-amber);
+  border: 2px solid var(--wall);
+}
+
+/* The window. On a phone it is a full-screen sheet; on the desk it fills the
+   space between the icons and the note at a fixed size, whatever its content. */
+.window {
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  animation: sheet-up 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.window[data-open="false"] { display: none; }
+@media (min-width: 1024px) {
+  .window,
+  .window[data-open="false"] {
+    display: flex;
+    position: relative;
+    inset: auto;
+    z-index: 10;
+    flex: 1;
+    min-width: 0;
+    max-width: 62rem;
+    height: 100%;
+    margin-inline: auto;
+    border-radius: 0.85rem;
+    box-shadow: var(--window-shadow);
+    overflow: hidden;
+    animation: win-in 0.22s ease-out both;
+  }
+  .window[data-max="true"] {
+    position: absolute;
+    inset: 1.25rem 1.75rem 6rem;
+    max-width: none;
+    z-index: 30;
+  }
+}
+@media (max-width: 1023px) {
+  html:has(.window[data-open="true"]) { overflow: hidden; }
+}
+
+.win-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  padding: env(safe-area-inset-top, 0) 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card) 85%, var(--background));
+  flex-shrink: 0;
+}
+@media (min-width: 1024px) { .win-bar { padding-inline: 1rem; } }
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.2);
+}
+button.dot:hover { filter: brightness(0.9); }
+button.dot:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+.win-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.win-body { padding: 2rem 1.25rem 3rem; max-width: 52rem; margin-inline: auto; }
+@media (min-width: 640px) { .win-body { padding: 2.75rem 2.75rem 3.5rem; } }
+.win-body:not([hidden]) { animation: win-in 0.25s ease-out both; }
+.win-body:not([hidden]) .panel-item { animation: boot-in 0.35s ease-out both; }
+.win-body .panel-item:nth-child(2) { animation-delay: 40ms !important; }
+.win-body .panel-item:nth-child(3) { animation-delay: 80ms !important; }
+.win-body .panel-item:nth-child(4) { animation-delay: 120ms !important; }
+.win-body .panel-item:nth-child(n + 5) { animation-delay: 160ms !important; }
+
+.win-status {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  padding: 0.5rem 1rem calc(0.5rem + env(safe-area-inset-bottom, 0));
+  border-top: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card) 85%, var(--background));
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted-foreground);
+}
+
+.nav-btn {
+  display: inline-flex;
+  min-height: 2.25rem;
+  min-width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: var(--muted-foreground);
+}
+.nav-btn:hover { color: var(--foreground); background: var(--muted); }
+
+.sticky-note {
+  position: relative;
+  padding: 1.25rem 1.25rem 1.5rem;
+  background: var(--sticky);
+  color: var(--sticky-ink);
+  transform: rotate(1.5deg);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 14px 22px -14px rgba(60, 50, 10, 0.45);
+  max-width: 20rem;
+}
+.sticky-note::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 70px;
+  height: 20px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: color-mix(in oklab, var(--background) 55%, transparent);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.dock {
+  position: fixed;
+  left: 50%;
+  bottom: calc(0.75rem + env(safe-area-inset-bottom, 0));
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem;
+  transform: translateX(-50%);
+  border-radius: 1.1rem;
+  background: color-mix(in oklab, var(--background) 70%, transparent);
+  backdrop-filter: blur(16px) saturate(1.5);
+  box-shadow: 0 0 0 1px var(--border), 0 16px 40px -16px rgba(0, 0, 0, 0.35);
+}
+@media (min-width: 1024px) { .dock { position: absolute; } }
+.dock-item {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  background: var(--background);
+  box-shadow: 0 0 0 1px var(--border);
+  color: var(--foreground);
+  transition: transform 0.18s ease-out;
+}
+.dock-item:hover { transform: translateY(-4px) scale(1.08); color: var(--accent-ink); }
+.dock-item:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.dock-item::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.35rem;
+  background: var(--foreground);
+  color: var(--background);
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s;
+}
+.dock-item:hover::after,
+.dock-item:focus-visible::after { opacity: 1; }
+
+.led {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 9999px;
+}
+.led-active {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 22%, transparent);
+}
+.led-in-progress {
+  background: var(--led-amber);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--led-amber) 25%, transparent);
+  animation: led-blink 2.6s ease-in-out infinite;
+}
+.led-archive { background: var(--muted-foreground); opacity: 0.45; }
+
+@keyframes led-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+@keyframes boot-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes win-in {
+  from { opacity: 0; transform: scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes sheet-up {
+  from { opacity: 0.6; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .led-in-progress, .window, .win-body, .panel-item { animation: none !important; }
+  .desk-icon-img, .dock-item { transition: none !important; }
+}
