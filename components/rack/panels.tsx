@@ -12,6 +12,7 @@ import {
   interests,
   journey,
   leadership,
+  leadershipGroups,
   mediumUrl,
   profile,
   projects,
@@ -439,27 +440,38 @@ function Education() {
 
 function Leadership() {
   return (
-    <ul className="space-y-3">
-      {leadership.map((l) => (
-        <Item key={l.role + l.org}>
-          <h4 className="font-semibold">
-            {l.role} <span className="font-normal text-muted-foreground">· {l.org}</span>
-          </h4>
-          {l.dates && <p className="font-mono text-[11px] text-muted-foreground">{l.dates}</p>}
-          {l.what && <p className="mt-2 text-sm leading-relaxed">{l.what}</p>}
-          {l.numbers && (
-            <p className="mt-2">
-              <Chip>{l.numbers}</Chip>
-            </p>
-          )}
-          {l.url && (
-            <p className="mt-3">
-              <ExtLink href={l.url}>Visit</ExtLink>
-            </p>
-          )}
-        </Item>
-      ))}
-    </ul>
+    <div className="space-y-7">
+      {leadershipGroups.map((group) => {
+        const entries = leadership.filter((entry) => entry.category === group.category);
+        if (!entries.length) return null;
+
+        return (
+          <section key={group.category}>
+            <h3 className="mb-3 border-b border-border pb-2 text-sm font-semibold">{group.title}</h3>
+            <ul className="space-y-3">
+              {entries.map((l) => (
+                <Item key={l.role + l.org}>
+                  <h4 className="font-semibold">{l.role}</h4>
+                  <p className="text-sm text-muted-foreground">{l.org}</p>
+                  {l.dates && <p className="mt-1 font-mono text-[11px] text-muted-foreground">{l.dates}</p>}
+                  {l.what && <p className="mt-2 text-sm leading-relaxed">{l.what}</p>}
+                  {l.numbers && (
+                    <p className="mt-2">
+                      <Chip>{l.numbers}</Chip>
+                    </p>
+                  )}
+                  {l.url && (
+                    <p className="mt-3">
+                      <ExtLink href={l.url}>Visit</ExtLink>
+                    </p>
+                  )}
+                </Item>
+              ))}
+            </ul>
+          </section>
+        );
+      })}
+    </div>
   );
 }
 

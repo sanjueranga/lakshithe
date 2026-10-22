@@ -626,9 +626,9 @@ export const leadership: Leadership[] = [
     category: "research",
   },
   {
-    role: "Volunteer Teacher & Speaker",
+    role: "Volunteer",
     org: "SIRED, Society of Industrial Relations and Entrepreneurship Development",
-    what: "Taught O/L students and ran seminars.",
+    what: "Helped run a seminar teaching mathematics to O/L students in rural schools.",
     category: "teaching",
   },
   {
@@ -642,9 +642,9 @@ export const leadership: Leadership[] = [
 ];
 
 export const leadershipGroups: { title: string; category: NonNullable<Leadership["category"]> }[] = [
-  { title: "Student society", category: "society" },
-  { title: "Research community", category: "research" },
-  { title: "Teaching & mentoring", category: "teaching" },
+  { title: "CSUP", category: "society" },
+  { title: "Research", category: "research" },
+  { title: "Volunteer", category: "teaching" },
   { title: "Startup", category: "startup" },
 ];
 
