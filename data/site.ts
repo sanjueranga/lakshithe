@@ -133,7 +133,7 @@ export const profile: Profile = {
   name: "Lakshitha Eranga",
   title: "Systems Researcher & Architect",
   intro:
-    "A boy from the Knuckles Mountain Range who grew up curious and reached for the sky and dreamt big. Today I’m a Computer Science graduate with First Class Honours from the University of Peradeniya and a Temporary Demonstrator there. I research the systems that run AI at scale and how to make them reliable and efficient at a lower cost.",
+    "A boy from a small village in the Knuckles Mountains of Sri Lanka who grew up curious and reached for the sky and dreamt big. Today I’m a Computer Science graduate with First Class Honours from the University of Peradeniya and a Temporary Demonstrator there. I research the systems that run AI at scale and how to make them reliable and efficient at a lower cost.",
   statusLine: "Looking toward PhD research in systems / AI infrastructure",
   photo: "/lakshitha-portrait.png",
   cv: "/Lakshitha_Eranga_CV.pdf",
@@ -696,7 +696,7 @@ export interface Interest {
 }
 
 export const outsideStory =
-  "I'm a boy from the Knuckles Mountain Range, who grew up curious, always trying to reach the skies and dreaming big. The mountains taught me to keep climbing; the rest of my time goes to engines, space, and the sea.";
+  "I'm a boy from a small village in the Knuckles Mountains of Sri Lanka, who grew up curious, always trying to reach the skies and dreaming big. The mountains taught me to keep climbing; the rest of my time goes to engines, space, and the sea.";
 
 export const interests: Interest[] = [
   { name: "Formula 1", art: "f1" },
