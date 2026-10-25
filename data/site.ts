@@ -133,7 +133,7 @@ export const profile: Profile = {
   name: "Lakshitha Eranga",
   title: "Systems Researcher & Architect",
   intro:
-    "A boy from the Knuckles Mountain Range who grew up curious, reached for the sky and dreamt big. Today I'm a Computer Science graduate (First Class Honours, University of Peradeniya) and a Temporary Demonstrator there, researching why parallelism stops paying off and how scheduling and memory behaviour set the cost of running AI workloads.",
+    "A boy from the Knuckles Mountain Range who grew up curious and reached for the sky and dreamt big. Today I’m a Computer Science graduate with First Class Honours from the University of Peradeniya and a Temporary Demonstrator there. I research the systems that run AI at scale and how to make them reliable and efficient at a lower cost.",
   statusLine: "Looking toward PhD research in systems / AI infrastructure",
   photo: "/lakshitha-portrait.png",
   cv: "/Lakshitha_Eranga_CV.pdf",
@@ -171,7 +171,7 @@ export const profile: Profile = {
 
 export const research = {
   interests:
-    "My interests sit at the intersection of systems engineering and machine learning. Watching distributed backends and asynchronous AI pipelines behave badly under load raised the questions I now find worth researching: why parallelism stops paying off, and how scheduling and memory behaviour quietly set the cost of running AI workloads.",
+    "My interests sit at the intersection of systems engineering and machine learning, with a focus on AI infrastructure: making AI reliable, efficient and affordable. Watching distributed backends and asynchronous AI pipelines behave badly under load raised questions around resource management, scheduling, memory behaviour and fault tolerance. One of them, why parallelism stops paying off, is the subject of my ISBM 2026 paper.",
   questions: [] as string[],
   collaborations: [] as { topic: string; with?: string; since?: string }[],
 };
@@ -726,7 +726,7 @@ export function buildUnits(): Unit[] {
       status: inReview ? "in-progress" : "active",
       count: plural(publications.length, "paper"),
       badge: inReview ? `${inReview} in review` : undefined,
-      preview: "Parallelism, scheduling and the cost of AI infrastructure",
+      preview: "AI infrastructure: reliable, efficient and affordable AI systems",
     },
     {
       id: "journey",
